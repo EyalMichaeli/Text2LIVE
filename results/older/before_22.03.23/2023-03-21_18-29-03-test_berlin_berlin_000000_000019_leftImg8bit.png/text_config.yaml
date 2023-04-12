@@ -1,0 +1,6 @@
+bootstrap_epoch: 1000
+bootstrap_text: ''
+comp_text: cloudy
+image_path: /mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images/test_berlin_berlin_000000_000019_leftImg8bit.png
+screen_text: cloudy
+src_text: cityscape

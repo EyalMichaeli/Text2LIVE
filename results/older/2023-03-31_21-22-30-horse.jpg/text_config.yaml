@@ -1,0 +1,6 @@
+bootstrap_epoch: 1000
+bootstrap_text: horse
+comp_text: golden horse
+image_path: ./data/images/horse.jpg
+screen_text: golden horse
+src_text: horse

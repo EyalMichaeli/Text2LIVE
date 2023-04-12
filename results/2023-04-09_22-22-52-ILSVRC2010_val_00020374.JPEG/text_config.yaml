@@ -1,0 +1,6 @@
+bootstrap_epoch: 500
+bootstrap_text: tiger
+comp_text: old tiger
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_example/ILSVRC2010_val_00020374.JPEG
+screen_text: old tiger
+src_text: tiger

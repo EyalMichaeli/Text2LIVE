@@ -1,0 +1,6 @@
+bootstrap_epoch: 1000
+bootstrap_text: cars
+comp_text: cityscape with black cars
+image_path: /mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png
+screen_text: black cars
+src_text: cityscape

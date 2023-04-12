@@ -1,0 +1,6 @@
+bootstrap_epoch: 500
+bootstrap_text: toilet
+comp_text: old toilet
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_example/ILSVRC2010_val_00017787.JPEG
+screen_text: old toilet
+src_text: toilet

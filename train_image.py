@@ -124,6 +124,11 @@ if __name__ == "__main__":
         path.mkdir(parents=True, exist_ok=True)
         with open(path / "config.yaml", "w") as f:
             yaml.dump(config, f)
+
+        # added, save example config too.
+        with open(path / "text_config.yaml", "w") as f:
+            yaml.dump(example_config, f)
+
         config["results_folder"] = str(path)
 
     train_model(config)
