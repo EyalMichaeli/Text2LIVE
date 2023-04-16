@@ -1,14 +1,13 @@
 import torch
 from .networks import define_G
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 class Model(torch.nn.Module):
     def __init__(self, cfg):
         super().__init__()
         self.cfg = cfg
-        self.netG = define_G(cfg).to(device)
+        self.netG = define_G(cfg)
 
     def render(self, net_output, bg_image=None):
         assert net_output.min() >= 0 and net_output.max() <= 1

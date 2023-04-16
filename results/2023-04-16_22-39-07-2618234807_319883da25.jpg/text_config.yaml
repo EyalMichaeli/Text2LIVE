@@ -1,0 +1,7 @@
+bootstrap_epoch: 300
+bootstrap_text: cereal oat
+comp_text: new cereal oat
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/cereal
+  oat/2618234807_319883da25.jpg
+screen_text: new cereal oat
+src_text: cereal oat

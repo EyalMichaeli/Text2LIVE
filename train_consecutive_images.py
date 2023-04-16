@@ -4,13 +4,16 @@ from argparse import ArgumentParser
 import datetime
 from pathlib import Path
 from typing import Dict
-
+import matplotlib.pyplot as plt
+import numpy as np
 import imageio
 import numpy as np
 import torch
 import yaml
 from tqdm import tqdm
-
+import cv2
+from PIL import Image
+import glob
 from datasets.image_dataset import SingleImageDataset
 from models.clip_extractor import ClipExtractor
 from models.image_model import Model
@@ -18,7 +21,7 @@ from util.losses import LossG
 from util.util import tensor2im, get_optimizer
 
 
-def train_model(config):
+def train_model(config, device):
 
     # set seed
     seed = config["seed"]
@@ -33,11 +36,11 @@ def train_model(config):
     dataset = SingleImageDataset(config)
 
     # define model
-    model = Model(config)
+    model = Model(config).to(device)
 
     # define loss function
-    clip_extractor = ClipExtractor(config)
-    criterion = LossG(config, clip_extractor)
+    clip_extractor = ClipExtractor(config, device)
+    criterion = LossG(config, clip_extractor, device)
 
     # define optimizer, scheduler
     optimizer = get_optimizer(config, model.parameters())
@@ -46,7 +49,7 @@ def train_model(config):
         inputs = dataset[0]
         for key in inputs:
             if key != "step":
-                inputs[key] = inputs[key].to(config["device"])
+                inputs[key] = inputs[key].to(device)
         optimizer.zero_grad()
         outputs = model(inputs)
         for key in inputs:
@@ -59,7 +62,7 @@ def train_model(config):
 
         # log current generated image to wandb
         if epoch % config["log_images_freq"] == 0:
-            src_img = dataset.get_img().to(config["device"])
+            src_img = dataset.get_img().to(device)
             with torch.no_grad():
                 output = model.render(model.netG(src_img), bg_image=src_img)
             for layer_name, layer_img in output.items():
@@ -90,9 +93,30 @@ def save_locally(results_folder, log_data):
             imageio.imwrite(f"{path}/{key}.png", log_data[key])
 
 
-def main(args, config_path):
+def visualize_output(results_folder: str):
+    # count how many numeric folders are in results_folder
+    num_folders = len([name for name in os.listdir(results_folder) if os.path.isdir(os.path.join(results_folder, name))])
+    # init plot
+    fig, axs = plt.subplots(1, num_folders, figsize=(num_folders * 5, 5))
+    # loop over all folders
+    images = []
+    for img_path in glob.glob(f"{results_folder}/*/composite.png"):
+        # append image to list
+        images.append(np.array(Image.open(img_path)))
+    for i, img in enumerate(images):
+        axs[i].imshow(img)
+        axs[i].axis("off")
+        plt.tight_layout()
+        plt.title(f"epoch: {(i + 1) * 50}")
+    plt.show()
+
+
+def main(args, config_path, n_epochs=400, visualize=False, device="cuda:0"):
+    print(f"device: {device}")
+
     with open(config_path, "r") as f:
         config = yaml.safe_load(f)
+    config["n_epochs"] = n_epochs
     with open(f"./configs/image_example_configs/{args.example_config}", "r") as f:
         example_config = yaml.safe_load(f)
     config["example_config"] = args.example_config
@@ -119,9 +143,12 @@ def main(args, config_path):
 
         config["results_folder"] = str(path)
 
-    train_model(config)
+    train_model(config, device)
     if config["use_wandb"]:
         wandb.finish()
+    
+    if visualize:
+        visualize_output(config["results_folder"])
 
 
 class Args:
@@ -135,35 +162,46 @@ def change_config_yaml(output_path, config_dict):
         yaml.dump(config_dict, f)
 
 
+def wrapped_main_func(config_path, example_config_name, text_config_dict, visualize=False, device=torch.device("cuda:0")):
+    args = Args(config_path, example_config_name)
+    change_config_yaml("/mnt/raid/home/eyal_michaeli/git/Text2LIVE/configs/image_example_configs/template.yaml", text_config_dict)
+    if visualize:
+        # plot the original image given in the text config dict
+        plt.imshow(Image.open(text_config_dict["image_path"]))
+        plt.show()
+    main(args, config_path, visualize=visualize, device=device)
 
 
-if __name__ == "__main__":
-    
-    os.environ['CUDA_VISIBLE_DEVICES'] = '3'
-    
+def run_on_imagenet_image(image_path, config_path, example_config_name, device):
+    """
+    Run the model on a single image.
+    Identifies what class is it using the path (its the parent of the image path)
+    And uses it to adjust the text config dict
+    """
+    class_name = Path(image_path).parent.name
+    extra_string_for_model = random.choice(["old", "new", "pretty", "good looking", "ugly", "bad", "nice", "beautiful"])
+    print(f"class_name: {class_name}, extra_string_for_model: {extra_string_for_model}")
+    text_config_dict = {
+                'image_path': image_path,
+                'screen_text': f'{extra_string_for_model} {class_name}', 
+                'comp_text': f'{extra_string_for_model} {class_name}',
+                'src_text': class_name,
+                'bootstrap_text': class_name,
+                'bootstrap_epoch': random.choice([200, 300, 400, 500])
+            }
+    print(text_config_dict)
+    wrapped_main_func(config_path, example_config_name, text_config_dict, visualize=True, device=device)
+
+
+
+
+if __name__ == "__main__":    
     
     config_path = "./configs/image_config.yaml"
     example_config_name = f"cs2cs.yaml"
     example_config_path = f"/mnt/raid/home/eyal_michaeli/git/Text2LIVE/configs/image_example_configs/cs2cs.yaml"
 
 
-
-
-    # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/imagenet_example/ILSVRC2010_val_00020374.JPEG" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'pretty tiger', 
-                'comp_text': 'pretty tiger',
-                'src_text': 'tiger',
-                'bootstrap_text': 'tiger',
-                'bootstrap_epoch': 500
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
 
     image_path = "/mnt/raid/home/eyal_michaeli/datasets/imagenet_example/ILSVRC2010_val_00020374.JPEG" # path to the input image
     text_config_dict = {

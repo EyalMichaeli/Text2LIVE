@@ -8,7 +8,7 @@ from util.util import get_screen_template, get_text_criterion, get_augmentations
 
 
 class LossG(torch.nn.Module):
-    def __init__(self, cfg, clip_extractor):
+    def __init__(self, cfg, clip_extractor, device):
         super().__init__()
 
         self.cfg = cfg
@@ -23,7 +23,7 @@ class LossG(torch.nn.Module):
         self.text_criterion = get_text_criterion(cfg)
 
         if cfg["bootstrap_epoch"] > 0 and cfg["lambda_bootstrap"] > 0:
-            self.relevancy_extractor = ClipRelevancy(cfg)
+            self.relevancy_extractor = ClipRelevancy(cfg, device)
             self.relevancy_criterion = torch.nn.MSELoss()
             self.lambda_bootstrap = cfg["lambda_bootstrap"]
 

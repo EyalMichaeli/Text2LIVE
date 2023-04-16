@@ -3,14 +3,15 @@ from torchvision import transforms as T
 import numpy as np
 from CLIP import clip_explainability as clip
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 # https://github.com/hila-chefer/Transformer-MM-Explainability/blob/main/CLIP_explainability.ipynb
 class ClipRelevancy(torch.nn.Module):
-    def __init__(self, cfg):
+    def __init__(self, cfg, device):
         super().__init__()
         self.cfg = cfg
+        self.device = device
         # TODO it would make more sense not to load ths model again (already done in the extractor)
         self.model = clip.load("ViT-B/32", device=device, jit=False)[0]
         clip_input_size = 224
@@ -23,20 +24,20 @@ class ClipRelevancy(torch.nn.Module):
         input_prompts = cfg["bootstrap_text"]
         if type(input_prompts) == str:
             input_prompts = [input_prompts]
-        self.text = clip.tokenize(input_prompts).to(cfg["device"])
+        self.text = clip.tokenize(input_prompts).to(device)
 
         if self.cfg["use_negative_bootstrap"]:
             input_negative_prompts = cfg["bootstrap_negative_text"]
             if type(input_negative_prompts) == str:
                 input_negative_prompts = [input_negative_prompts]
-            self.bootstrap_negative_text = clip.tokenize(input_negative_prompts).to(cfg["device"])
+            self.bootstrap_negative_text = clip.tokenize(input_negative_prompts).to(device)
 
     def image_relevance(self, image_relevance):
         patch_size = 32  # hardcoded for ViT-B/32 which we use
         h = w = 224
         image_relevance = image_relevance.reshape(1, 1, h // patch_size, w // patch_size)
         image_relevance = torch.nn.functional.interpolate(image_relevance, size=(h, w), mode="bilinear")
-        image_relevance = image_relevance.reshape(h, w).to(device)
+        image_relevance = image_relevance.reshape(h, w).to(self.device)
         image_relevance = (image_relevance - image_relevance.min()) / (image_relevance.max() - image_relevance.min())
         return image_relevance
 
@@ -51,12 +52,12 @@ class ClipRelevancy(torch.nn.Module):
         one_hot = np.zeros((logits_per_image.shape[0], logits_per_image.shape[1]), dtype=np.float32)
         one_hot[torch.arange(logits_per_image.shape[0]), index] = 1
         one_hot = torch.from_numpy(one_hot).requires_grad_(True)
-        one_hot = torch.sum(one_hot.to(device) * logits_per_image)
+        one_hot = torch.sum(one_hot.to(self.device) * logits_per_image)
         self.model.zero_grad()
 
         image_attn_blocks = list(dict(self.model.visual.transformer.resblocks.named_children()).values())
         num_tokens = image_attn_blocks[0].attn_probs.shape[-1]
-        R = torch.eye(num_tokens, num_tokens, dtype=image_attn_blocks[0].attn_probs.dtype).to(device)
+        R = torch.eye(num_tokens, num_tokens, dtype=image_attn_blocks[0].attn_probs.dtype).to(self.device)
         R = R.unsqueeze(0).expand(batch_size, num_tokens, num_tokens)
         for i, blk in enumerate(image_attn_blocks):
             if i <= self.cfg["relevancy_num_layers"]:

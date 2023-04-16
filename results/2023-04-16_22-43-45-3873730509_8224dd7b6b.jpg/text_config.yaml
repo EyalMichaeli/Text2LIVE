@@ -1,0 +1,6 @@
+bootstrap_epoch: 500
+bootstrap_text: oat
+comp_text: old oat
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/oat/3873730509_8224dd7b6b.jpg
+screen_text: old oat
+src_text: oat

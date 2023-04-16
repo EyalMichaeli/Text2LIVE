@@ -1,0 +1,6 @@
+bootstrap_epoch: 500
+bootstrap_text: tiger
+comp_text: pretty tiger
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/clove/2374564187_6ca0cd8126.jpg
+screen_text: pretty tiger
+src_text: tiger
