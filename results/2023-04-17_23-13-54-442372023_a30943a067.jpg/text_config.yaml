@@ -1,0 +1,6 @@
+bootstrap_epoch: 200
+bootstrap_text: hospice
+comp_text: a  vibrant hospice hospice
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/442372023_a30943a067.jpg
+screen_text: vibrant hospice hospice
+src_text: hospice
