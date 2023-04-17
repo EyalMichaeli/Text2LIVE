@@ -1,0 +1,7 @@
+bootstrap_epoch: 5000
+bootstrap_text: canary grass
+comp_text: a old canary grass
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/canary
+  grass/2128316716_6c166b8896.jpg
+screen_text: old canary grass
+src_text: canary grass

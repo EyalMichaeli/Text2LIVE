@@ -1,0 +1,6 @@
+bootstrap_epoch: 200
+bootstrap_text: badger
+comp_text: a old badger
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/badger/14123057_e10e3939b5.jpg
+screen_text: old badger
+src_text: badger

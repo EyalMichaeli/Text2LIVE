@@ -1,0 +1,6 @@
+bootstrap_epoch: 400
+bootstrap_text: mussel
+comp_text: a high quality image of  old mussel
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/mussel/177832246_064711eccd.jpg
+screen_text: old mussel
+src_text: mussel

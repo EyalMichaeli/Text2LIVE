@@ -1,0 +1,6 @@
+bootstrap_epoch: 400
+bootstrap_text: glowworm
+comp_text: high quality image of  glittering glowworm glowworm
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/glowworm/174140102_871eb90a86.jpg
+screen_text: glittering glowworm glowworm
+src_text: glowworm

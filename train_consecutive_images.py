@@ -6,7 +6,9 @@ from pathlib import Path
 from typing import Dict
 import matplotlib.pyplot as plt
 import numpy as np
+import shutil
 import imageio
+import math
 import numpy as np
 import torch
 import yaml
@@ -19,100 +21,42 @@ from models.clip_extractor import ClipExtractor
 from models.image_model import Model
 from util.losses import LossG
 from util.util import tensor2im, get_optimizer
+from train_image import train_model, save_locally
+
+from image_text_tools.gpt_methods import get_gpt_response
 
 
-def train_model(config, device):
-
-    # set seed
-    seed = config["seed"]
-    if seed == -1:
-        seed = np.random.randint(2 ** 32)
-        random.seed(seed)
-        np.random.seed(seed)
-        torch.manual_seed(seed)
-    print(f"running with seed: {seed}.")
-
-    # create dataset, loader
-    dataset = SingleImageDataset(config)
-
-    # define model
-    model = Model(config).to(device)
-
-    # define loss function
-    clip_extractor = ClipExtractor(config, device)
-    criterion = LossG(config, clip_extractor, device)
-
-    # define optimizer, scheduler
-    optimizer = get_optimizer(config, model.parameters())
-
-    for epoch in tqdm(range(1, config["n_epochs"] + 1)):
-        inputs = dataset[0]
-        for key in inputs:
-            if key != "step":
-                inputs[key] = inputs[key].to(device)
-        optimizer.zero_grad()
-        outputs = model(inputs)
-        for key in inputs:
-            if key != "step":
-                inputs[key] = [inputs[key][0]]
-        losses = criterion(outputs, inputs)
-        loss_G = losses["loss"]
-        log_data = losses
-        log_data["epoch"] = epoch
-
-        # log current generated image to wandb
-        if epoch % config["log_images_freq"] == 0:
-            src_img = dataset.get_img().to(device)
-            with torch.no_grad():
-                output = model.render(model.netG(src_img), bg_image=src_img)
-            for layer_name, layer_img in output.items():
-                image_numpy_output = tensor2im(layer_img)
-                log_data[layer_name] = [wandb.Image(image_numpy_output)] if config["use_wandb"] else image_numpy_output
-
-        loss_G.backward()
-        optimizer.step()
-
-        # update learning rate
-        if config["scheduler_policy"] == "exponential":
-            optimizer.param_groups[0]["lr"] = max(config["min_lr"], config["gamma"] * optimizer.param_groups[0]["lr"])
-        lr = optimizer.param_groups[0]["lr"]
-        log_data["lr"] = lr
-
-        if config["use_wandb"]:
-            wandb.log(log_data)
-        else:
-            if epoch % config["log_images_freq"] == 0:
-                save_locally(config["results_folder"], log_data)
-
-
-def save_locally(results_folder, log_data):
-    path = Path(results_folder, str(log_data["epoch"]))
-    path.mkdir(parents=True, exist_ok=True)
-    for key in log_data.keys():
-        if key in ["composite", "alpha", "edit_on_greenscreen", "edit"]:
-            imageio.imwrite(f"{path}/{key}.png", log_data[key])
-
-
-def visualize_output(results_folder: str):
-    # count how many numeric folders are in results_folder
-    num_folders = len([name for name in os.listdir(results_folder) if os.path.isdir(os.path.join(results_folder, name))])
+def visualize_output(results_folder: str, title: str = ""):
+    """
+    Visualize the output of the training process.
+    "uses only the "composite" image.
+    if it's more than 3 images, it will be split into multiple rows.
+    """
+    folders_names = [name for name in os.listdir(results_folder) if os.path.isdir(os.path.join(results_folder, name))]
+    # sort by epoch
+    folders_names = sorted(folders_names, key=lambda x: int(x))
     # init plot
-    fig, axs = plt.subplots(1, num_folders, figsize=(num_folders * 5, 5))
-    # loop over all folders
-    images = []
-    for img_path in glob.glob(f"{results_folder}/*/composite.png"):
-        # append image to list
-        images.append(np.array(Image.open(img_path)))
-    for i, img in enumerate(images):
-        axs[i].imshow(img)
-        axs[i].axis("off")
-        plt.tight_layout()
-        plt.title(f"epoch: {(i + 1) * 50}")
+    num_rows = math.ceil(len(folders_names)/3)
+    fig, axs = plt.subplots(num_rows, 3, figsize=(15, 5 * num_rows))
+    # set axis off for all images
+    for ax in axs.flat:
+        ax.axis("off")
+    # iterate over all folders
+    for i, folder_name in enumerate(folders_names):
+        epoch_folder = os.path.join(results_folder, folder_name)
+        # read the image
+        img = np.array(Image.open(os.path.join(epoch_folder, "composite.png")))
+        # add it to the plot
+        axs[i//3, i%3].imshow(img)
+        axs[i//3, i%3].set_title(f"epoch: {Path(epoch_folder).name}")
     plt.show()
 
+    
 
-def main(args, config_path, n_epochs=400, visualize=False, device="cuda:0"):
-    print(f"device: {device}")
+
+def main(args, config_path, complete_text: str = None, n_epochs=400, visualize=False, device="cuda:0", verbose=False):
+    if verbose:
+        print(f"device: {device}")
 
     with open(config_path, "r") as f:
         config = yaml.safe_load(f)
@@ -147,8 +91,11 @@ def main(args, config_path, n_epochs=400, visualize=False, device="cuda:0"):
     if config["use_wandb"]:
         wandb.finish()
     
+
     if visualize:
-        visualize_output(config["results_folder"])
+        visualize_output(config["results_folder"], title=complete_text)
+
+    return config["results_folder"]
 
 
 class Args:
@@ -162,524 +109,101 @@ def change_config_yaml(output_path, config_dict):
         yaml.dump(config_dict, f)
 
 
-def wrapped_main_func(config_path, example_config_name, text_config_dict, visualize=False, device=torch.device("cuda:0")):
+def pick_random_text_aug():
+    """
+    picks a random text augmentation (that was used in the original paper) to later be added ot the text.
+    """    
+    text_augs = ["a photo of ", "the photo of ", "image of ", "an image of ", "high quality image of ", 
+                "a high quality image of ", "the ", "a ", "an "]
+    text_aug = random.choice(text_augs)
+    return text_aug
+
+
+
+def wrapped_main_func(config_path, example_config_name, text_config_dict, n_epochs=400, visualize=False, device=torch.device("cuda:0"), verbose=False):
     args = Args(config_path, example_config_name)
     change_config_yaml("/mnt/raid/home/eyal_michaeli/git/Text2LIVE/configs/image_example_configs/template.yaml", text_config_dict)
     if visualize:
         # plot the original image given in the text config dict
         plt.imshow(Image.open(text_config_dict["image_path"]))
+        # find out title using image_path, and add to plot
+        title = Path(text_config_dict["image_path"]).parent.name
+        plt.title(f"original image class: {title}")
         plt.show()
-    main(args, config_path, visualize=visualize, device=device)
+    # get the complete text from the config dict
+    complete_text = text_config_dict["comp_text"]
+    output_folder = main(args, config_path, complete_text, visualize=visualize, n_epochs=n_epochs, device=device, verbose=verbose)
+    return output_folder
 
 
-def run_on_imagenet_image(image_path, config_path, example_config_name, device):
+def run_on_imagenet_image(image_path, config_path, example_config_name, n_epochs, use_gpt=True, text_config_dict=None, visualze=False, device="cuda:0", verbose=False):
     """
     Run the model on a single image.
     Identifies what class is it using the path (its the parent of the image path)
     And uses it to adjust the text config dict
     """
     class_name = Path(image_path).parent.name
-    extra_string_for_model = random.choice(["old", "new", "pretty", "good looking", "ugly", "bad", "nice", "beautiful"])
+    if use_gpt:
+        extra_string_for_model = get_gpt_response(text=class_name)
+    else:
+        extra_string_for_model = random.choice(["old", "new", "pretty", "good looking", "ugly", "bad", "nice", "beautiful"])
     print(f"class_name: {class_name}, extra_string_for_model: {extra_string_for_model}")
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': f'{extra_string_for_model} {class_name}', 
-                'comp_text': f'{extra_string_for_model} {class_name}',
-                'src_text': class_name,
-                'bootstrap_text': class_name,
-                'bootstrap_epoch': random.choice([200, 300, 400, 500])
-            }
-    print(text_config_dict)
-    wrapped_main_func(config_path, example_config_name, text_config_dict, visualize=True, device=device)
+    target_text = f'{extra_string_for_model} {class_name}'
+    if text_config_dict is None:
+        text_config_dict = {
+                    'image_path': image_path,
+                    'screen_text': target_text, 
+                    'comp_text': f'{pick_random_text_aug()} {target_text}',
+                    'src_text': class_name,
+                    'bootstrap_text': class_name,
+                    'bootstrap_epoch': random.choice([200, 300, 400, 500])
+                }
+    if verbose:
+        print(f"text_config_dict: {text_config_dict}")
+
+    output_folder = wrapped_main_func(config_path, example_config_name, text_config_dict, n_epochs, visualize=visualze, device=device, verbose=verbose)
+    return output_folder, f"{extra_string_for_model}_{class_name}"
+
 
 
 
 
 if __name__ == "__main__":    
-    
+
+    NUM_RUNS_FOR_EACH_IMAGE = 1
+
     config_path = "./configs/image_config.yaml"
-    example_config_name = f"cs2cs.yaml"
-    example_config_path = f"/mnt/raid/home/eyal_michaeli/git/Text2LIVE/configs/image_example_configs/cs2cs.yaml"
-
-
-
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/imagenet_example/ILSVRC2010_val_00020374.JPEG" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'old tiger', 
-                'comp_text': 'old tiger',
-                'src_text': 'tiger',
-                'bootstrap_text': 'tiger',
-                'bootstrap_epoch': 500
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-    
-    exit(0)
-
-    # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'night', 
-                'comp_text': 'cityscape at nighttime',
-                'src_text': 'cityscapes',
-                'bootstrap_text': 'sky',
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'snow',  # edit layer
-                'comp_text': 'snowy cityscape',  # full edited image
-                'src_text': 'cityscape',  # describe original
-                'bootstrap_text': '',  # what to change?
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'snow',  # edit layer
-                'comp_text': 'snowy cityscape',  # full edited image
-                'src_text': 'cityscape',  # describe original
-                'bootstrap_text': 'weather',  # what to change?
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'snow',  # edit layer
-                'comp_text': 'snowy cityscape',  # full edited image
-                'src_text': 'cityscape',  # describe original
-                'bootstrap_text': 'trees',  # what to change?
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'autumn', 
-                'comp_text': 'autumn cityscape scene',
-                'src_text': 'cityscape',
-                'bootstrap_text': '',
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'autumn', 
-                'comp_text': 'autumn cityscape scene',
-                'src_text': 'cityscape',
-                'bootstrap_text': 'weather',
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'autumn', 
-                'comp_text': 'autumn cityscape scene',
-                'src_text': 'cityscape',
-                'bootstrap_text': 'trees',
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'black cars', 
-                'comp_text': 'cityscape with black cars',
-                'src_text': 'cityscape with cars',
-                'bootstrap_text': 'cars',
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'black cars', 
-                'comp_text': 'cityscape with white cars',
-                'src_text': 'cityscape with cars',
-                'bootstrap_text': 'cars',
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'black cars', 
-                'comp_text': 'cityscape with old cars',
-                'src_text': 'cityscape with cars',
-                'bootstrap_text': 'cars',
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'black cars', 
-                'comp_text': 'cityscape with black cars',
-                'src_text': 'cityscape',
-                'bootstrap_text': 'cars',
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-    """Different IMAGE"""
-
-
-
-    # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/train_extra_erlangen_erlangen_000000_000049_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'shadow', 
-                'comp_text': 'cityscape with shadow on the road',
-                'src_text': 'cityscape',
-                'bootstrap_text': 'road',
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000000_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'shadow', 
-                'comp_text': 'road with shadow',
-                'src_text': 'road',
-                'bootstrap_text': 'road',
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/train_extra_erlangen_erlangen_000000_000049_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'buildings', 
-                'comp_text': 'cityscape with old buildings',
-                'src_text': 'cityscape',
-                'bootstrap_text': 'buildings',
-                'bootstrap_epoch': 1000
-            }
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-    """
-    New image
-    """
-        # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000262_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'road made out of bricks', 
-                'comp_text': 'cityscape with a brick road',
-                'src_text': 'cityscape with a road',
-                'bootstrap_text': 'road',
-                'bootstrap_epoch': 1000
-            }
-
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-       # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000262_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'brick road', 
-                'comp_text': 'cityscape with a brick road',
-                'src_text': 'cityscape with a road',
-                'bootstrap_text': 'road',
-                'bootstrap_epoch': 1000
-            }
-
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-       # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000262_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'brick road', 
-                'comp_text': 'cityscape with a brick road',
-                'src_text': 'cityscape',
-                'bootstrap_text': 'road',
-                'bootstrap_epoch': 1000
-            }
-
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-       # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000262_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'yellow trees', 
-                'comp_text': 'cityscape with yellow trees',
-                'src_text': 'cityscape with trees',
-                'bootstrap_text': 'trees',
-                'bootstrap_epoch': 1000
-            }
-
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-       # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000262_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'yellow vegetation', 
-                'comp_text': 'cityscape with yellow vegetation',
-                'src_text': 'cityscape with vegetation',
-                'bootstrap_text': 'vegetation',
-                'bootstrap_epoch': 1000
-            }
-
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-       # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000262_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'black cars', 
-                'comp_text': 'cityscape with black cars',
-                'src_text': 'cityscape with cars',
-                'bootstrap_text': 'cars',
-                'bootstrap_epoch': 1000
-            }
-
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-       # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000262_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'snowy road', 
-                'comp_text': 'cityscape with a road convered in snow',
-                'src_text': 'cityscape with a road',
-                'bootstrap_text': 'road',
-                'bootstrap_epoch': 1000
-            }
-
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-
-       # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000262_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'snowy road', 
-                'comp_text': 'a road convered in snow',
-                'src_text': 'a road',
-                'bootstrap_text': 'road',
-                'bootstrap_epoch': 1000
-            }
-
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-       # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000262_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'a gravel road', 
-                'comp_text': 'a gravel road',
-                'src_text': 'a road',
-                'bootstrap_text': 'road',
-                'bootstrap_epoch': 1000
-            }
-
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-       # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000262_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'dirty road', 
-                'comp_text': 'a road convered in dirt',
-                'src_text': 'a road',
-                'bootstrap_text': 'road',
-                'bootstrap_epoch': 1000
-            }
-
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
-
-
-
-
-       # the config from the yaml file (saved as text_config.yaml)
-    image_path = "/mnt/raid/home/eyal_michaeli/datasets/cityscapes_flattened/images_a/test_berlin_berlin_000262_000019_leftImg8bit.png" # path to the input image
-    text_config_dict = {
-                'image_path': image_path,
-                'screen_text': 'clean road', 
-                'comp_text': 'a clean road',
-                'src_text': 'a road',
-                'bootstrap_text': 'road',
-                'bootstrap_epoch': 1000
-            }
-
-
-    args = Args(config_path=config_path,
-                example_config_path=example_config_name)
-    change_config_yaml(example_config_path, text_config_dict)
-    main(args, config_path)
+    example_config_name = f"template.yaml"  
+    device = torch.device("cuda:2")
+
+    print(f"using device: {device}")
+
+    imagenet_image_paths = sorted(list(glob.glob("/mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/*/*.jpg")))
+    # take only half 
+    index_to_split = len(imagenet_image_paths)//2
+    imagenet_image_paths = imagenet_image_paths[: index_to_split]
+    print(f"len(imagenet_image_paths): {len(imagenet_image_paths)}")
+    print(f"index_to_split: {index_to_split}")
+
+    # run once on each imagenet image:
+    for image_path in tqdm(imagenet_image_paths):
+        for _ in range(NUM_RUNS_FOR_EACH_IMAGE):
+            # pick a random number of epochs
+            n_epochs = random.choice([200, 300, 400])
+            output_folder, edited_class_string = run_on_imagenet_image(image_path, config_path, example_config_name, n_epochs=n_epochs, use_gpt=True, visualze=False, device=device)
+
+            # copy the resulting image (the latest epoch) to the same imagenet folder
+            # so we can later use it to train the classifier
+            # (we want to train the classifier on the images that were generated by the model)
+
+            # take the *image_name* from the result folder
+            image_name = Path(output_folder).name[20:-4]
+            file_path_to_copy = Path(output_folder) / f"{n_epochs}" / "composite.png"
+            # copy the file to the imagenet class folder, with the name consisting of the epoch number and the image name
+            target_file_name = f"{image_name}_text2live_{edited_class_string}_epochs_{n_epochs}.png"
+            target_path = Path(image_path).parent / target_file_name
+            print(f"copying {file_path_to_copy} to {target_path}")
+            shutil.copy(file_path_to_copy, target_path)
+
+        
 

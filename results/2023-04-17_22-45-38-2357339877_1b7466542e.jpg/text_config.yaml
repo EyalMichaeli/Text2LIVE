@@ -1,0 +1,6 @@
+bootstrap_epoch: 500
+bootstrap_text: glowworm
+comp_text: a  radiant glowworm glowworm
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/glowworm/2357339877_1b7466542e.jpg
+screen_text: radiant glowworm glowworm
+src_text: glowworm

@@ -1,0 +1,6 @@
+bootstrap_epoch: 300
+bootstrap_text: hemlock
+comp_text: the  ugly hemlock
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hemlock/2603158540_d8dc4eb6f6.jpg
+screen_text: ugly hemlock
+src_text: hemlock

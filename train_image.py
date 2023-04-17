@@ -15,27 +15,29 @@ from models.image_model import Model
 from util.losses import LossG
 from util.util import tensor2im, get_optimizer
 
+SEED = None
 
-def train_model(config):
-
-    # set seed
-    seed = config["seed"]
-    if seed == -1:
-        seed = np.random.randint(2 ** 32)
-        random.seed(seed)
-        np.random.seed(seed)
-        torch.manual_seed(seed)
+def train_model(config, device):
+    if SEED is not None:
+        seed = SEED
+    else:
+        seed = config["seed"]
+        if seed == -1:
+            seed = np.random.randint(2 ** 32)
+            random.seed(seed)
+            np.random.seed(seed)
+            torch.manual_seed(seed)
     print(f"running with seed: {seed}.")
 
     # create dataset, loader
     dataset = SingleImageDataset(config)
 
     # define model
-    model = Model(config)
+    model = Model(config).to(device)
 
     # define loss function
-    clip_extractor = ClipExtractor(config)
-    criterion = LossG(config, clip_extractor)
+    clip_extractor = ClipExtractor(config, device)
+    criterion = LossG(config, clip_extractor, device)
 
     # define optimizer, scheduler
     optimizer = get_optimizer(config, model.parameters())
@@ -44,7 +46,7 @@ def train_model(config):
         inputs = dataset[0]
         for key in inputs:
             if key != "step":
-                inputs[key] = inputs[key].to(config["device"])
+                inputs[key] = inputs[key].to(device)
         optimizer.zero_grad()
         outputs = model(inputs)
         for key in inputs:
@@ -57,7 +59,7 @@ def train_model(config):
 
         # log current generated image to wandb
         if epoch % config["log_images_freq"] == 0:
-            src_img = dataset.get_img().to(config["device"])
+            src_img = dataset.get_img().to(device)
             with torch.no_grad():
                 output = model.render(model.netG(src_img), bg_image=src_img)
             for layer_name, layer_img in output.items():

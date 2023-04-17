@@ -1,0 +1,6 @@
+bootstrap_epoch: 1000
+bootstrap_text: Sno-cat
+comp_text: a old Sno-cat
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Sno-cat/536746438_2c2e0585f7.jpg
+screen_text: old Sno-cat
+src_text: Sno-cat

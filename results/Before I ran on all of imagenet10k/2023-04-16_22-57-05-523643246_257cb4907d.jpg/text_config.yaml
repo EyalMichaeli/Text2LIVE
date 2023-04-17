@@ -1,0 +1,7 @@
+bootstrap_epoch: 300
+bootstrap_text: business suit
+comp_text: pretty business suit
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/business
+  suit/523643246_257cb4907d.jpg
+screen_text: pretty business suit
+src_text: business suit

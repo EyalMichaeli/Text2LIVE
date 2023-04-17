@@ -1,0 +1,6 @@
+bootstrap_epoch: 300
+bootstrap_text: hospice
+comp_text: an  rustic hospice hospice
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/3209175436_4c6a909cd2.jpg
+screen_text: rustic hospice hospice
+src_text: hospice

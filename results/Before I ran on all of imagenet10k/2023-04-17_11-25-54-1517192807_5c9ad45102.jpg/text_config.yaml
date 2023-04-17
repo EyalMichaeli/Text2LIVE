@@ -1,0 +1,7 @@
+bootstrap_epoch: 300
+bootstrap_text: leopard cat
+comp_text: high quality image of  old leopard cat
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/leopard
+  cat/1517192807_5c9ad45102.jpg
+screen_text: old leopard cat
+src_text: leopard cat

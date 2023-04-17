@@ -1,0 +1,6 @@
+bootstrap_epoch: 400
+bootstrap_text: hospice
+comp_text: the  calm hospice hospice
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/2774955108_d4a67fcac0.jpg
+screen_text: calm hospice hospice
+src_text: hospice

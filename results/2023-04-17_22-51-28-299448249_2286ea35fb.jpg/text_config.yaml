@@ -1,0 +1,6 @@
+bootstrap_epoch: 200
+bootstrap_text: glowworm
+comp_text: a photo of  lively glowworm glowworm
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/glowworm/299448249_2286ea35fb.jpg
+screen_text: lively glowworm glowworm
+src_text: glowworm
