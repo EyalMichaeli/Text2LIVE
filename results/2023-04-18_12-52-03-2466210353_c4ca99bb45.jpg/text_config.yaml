@@ -1,0 +1,11 @@
+bootstrap_epoch: 500
+bootstrap_text: American crow
+comp_text: 'high quality image of  I apologize for my mistake. Here''s another one:
+
+  majestic crow American crow'
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  crow/2466210353_c4ca99bb45.jpg
+screen_text: 'I apologize for my mistake. Here''s another one:
+
+  majestic crow American crow'
+src_text: American crow

@@ -202,6 +202,8 @@ if __name__ == "__main__":
                 logging.info(f"skipping image_path: {image_path} because we already ran on it {num_files_with_image_name} times")
                 continue
 
+            # check if the image has larger size than 256x256
+            # run
             # pick a random number of epochs
             n_epochs = random.choice([200, 300, 400])
             output_folder, edited_class_string = run_on_imagenet_image(image_path, config_path, example_config_name, n_epochs=n_epochs, use_gpt=True, visualze=False, device=device)

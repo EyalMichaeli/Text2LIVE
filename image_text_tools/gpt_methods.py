@@ -1,5 +1,5 @@
 import openai
-
+import logging
 
 # instead of the above line, you can also use the following line:
 with open("openai_api_key.txt", "r") as f:
@@ -52,6 +52,34 @@ def get_gpt_response(text, bot_messeges=BOT_MESSAGES_IMAGENET):
     bot_messeges.append(
         {'role': 'assistant', 'content': chat_response})
     
+    # if chat response contains: 'another one:', then we need to ask again
+    # if we ask again too many times, we will get an error
+    max_times_to_ask_again = 5
+    times_asked_again = 0
+    if 'another one' in chat_response:
+        logging.info("strange response, asking again. response: " + chat_response)
+        chat_response = get_gpt_response(text, bot_messeges)
+        times_asked_again += 1
+        if times_asked_again > max_times_to_ask_again:
+            raise Exception("too many times asked GPT again")
+    
+    # if there are new lines in the response, we will ask again
+    if '\n' in chat_response:
+        logging.info("strange response, asking again. response: " + chat_response)
+        chat_response = get_gpt_response(text, bot_messeges)
+        times_asked_again += 1
+        if times_asked_again > max_times_to_ask_again:
+            raise Exception("too many times asked GPT again")
+    
+    # if there are too many words, we will ask again
+    MAX_WORDS = 6
+    if len(chat_response.split()) > MAX_WORDS:
+        logging.info("strange response, asking again. response: " + chat_response)
+        chat_response = get_gpt_response(text, bot_messeges)
+        times_asked_again += 1
+        if times_asked_again > max_times_to_ask_again:
+            raise Exception("too many times asked GPT again")
+        
     return chat_response
 
 

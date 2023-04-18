@@ -1,13 +1,13 @@
-bootstrap_epoch: 300
+bootstrap_epoch: 200
 bootstrap_text: American crow
-comp_text: 'a photo of  I apologize if my previous responses were not satisfactory.
-  Here''s another one:
+comp_text: 'a  I apologize if my previous responses were not satisfactory. Here''s
+  another one:
 
-  urban crow American crow'
+  regal crow American crow'
 image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
-  crow/2672298578_c504218533.jpg
+  crow/2538238280_ecf02de32b.jpg
 screen_text: 'I apologize if my previous responses were not satisfactory. Here''s
   another one:
 
-  urban crow American crow'
+  regal crow American crow'
 src_text: American crow
