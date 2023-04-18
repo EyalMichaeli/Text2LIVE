@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: American bittern
+comp_text: an  disguised American bittern American bittern
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  bittern/467874339_7e5b752c1d.jpg
+screen_text: disguised American bittern American bittern
+src_text: American bittern

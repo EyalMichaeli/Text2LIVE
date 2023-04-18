@@ -193,6 +193,15 @@ if __name__ == "__main__":
     # run once on each imagenet image:
     for image_path in tqdm(imagenet_image_paths):
         for _ in range(NUM_RUNS_FOR_EACH_IMAGE):
+            # check how many file names contain the name of the image in the parent folder of image_path
+            # if there are more than NUM_RUNS_FOR_EACH_IMAGE, then we already ran on this image
+            image_name = Path(image_path).stem
+            parent_folder_name = Path(image_path).parent.name
+            num_files_with_image_name = len(list(Path(image_path).parent.glob(f"*{image_name}*")))
+            if num_files_with_image_name > NUM_RUNS_FOR_EACH_IMAGE:
+                logging.info(f"skipping image_path: {image_path} because we already ran on it {num_files_with_image_name} times")
+                continue
+
             # pick a random number of epochs
             n_epochs = random.choice([200, 300, 400])
             output_folder, edited_class_string = run_on_imagenet_image(image_path, config_path, example_config_name, n_epochs=n_epochs, use_gpt=True, visualze=False, device=device)

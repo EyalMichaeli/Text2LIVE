@@ -1,0 +1,12 @@
+bootstrap_epoch: 300
+bootstrap_text: Alaska fur seal
+comp_text: 'image of  Sorry about that, I was having some technical issues. Here''s
+  my response:
+
+  sleepy Alaska fur seal Alaska fur seal'
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska
+  fur seal/368221367_f70a5a8c6c_o.jpg
+screen_text: 'Sorry about that, I was having some technical issues. Here''s my response:
+
+  sleepy Alaska fur seal Alaska fur seal'
+src_text: Alaska fur seal

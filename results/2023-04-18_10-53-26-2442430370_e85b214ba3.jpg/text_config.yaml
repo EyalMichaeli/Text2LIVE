@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: American bittern
+comp_text: a  curious American bittern American bittern
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  bittern/2442430370_e85b214ba3.jpg
+screen_text: curious American bittern American bittern
+src_text: American bittern

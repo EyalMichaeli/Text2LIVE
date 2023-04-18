@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: American bittern
+comp_text: an image of  lonely American bittern American bittern
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  bittern/2173793873_354e0012be.jpg
+screen_text: lonely American bittern American bittern
+src_text: American bittern

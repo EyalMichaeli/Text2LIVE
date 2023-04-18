@@ -1,0 +1,6 @@
+bootstrap_epoch: 500
+bootstrap_text: hospice
+comp_text: a  Tranquil hospice hospice
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/3209201796_a046516ef3.jpg
+screen_text: Tranquil hospice hospice
+src_text: hospice

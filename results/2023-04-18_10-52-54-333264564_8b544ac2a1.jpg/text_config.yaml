@@ -1,0 +1,6 @@
+bootstrap_epoch: 300
+bootstrap_text: huisache
+comp_text: a photo of  Fragrant huisache huisache
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/333264564_8b544ac2a1.jpg
+screen_text: Fragrant huisache huisache
+src_text: huisache

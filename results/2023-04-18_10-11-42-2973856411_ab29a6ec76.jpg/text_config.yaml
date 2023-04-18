@@ -1,0 +1,6 @@
+bootstrap_epoch: 200
+bootstrap_text: hospice
+comp_text: image of  cozy hospice hospice
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/2973856411_ab29a6ec76.jpg
+screen_text: cozy hospice hospice
+src_text: hospice

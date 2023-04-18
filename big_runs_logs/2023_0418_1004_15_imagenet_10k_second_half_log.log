@@ -9,3 +9,99 @@
 2023-04-18 10:08:41,161 INFO copying results/2023-04-18_10-07-08-274463286_dcc7491802.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/274463286_dcc7491802_text2live_serene hospice_hospice_epochs_200.png
 2023-04-18 10:08:42,114 INFO class_name: hospice, extra_string_for_model: Welcoming hospice
 2023-04-18 10:08:42,122 INFO running with seed: 639257487.
+2023-04-18 10:11:41,866 INFO copying results/2023-04-18_10-08-42-2774955108_d4a67fcac0.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/2774955108_d4a67fcac0_text2live_Welcoming hospice_hospice_epochs_400.png
+2023-04-18 10:11:42,710 INFO class_name: hospice, extra_string_for_model: cozy hospice
+2023-04-18 10:11:42,726 INFO running with seed: 1579990472.
+2023-04-18 10:14:42,911 INFO copying results/2023-04-18_10-11-42-2973856411_ab29a6ec76.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/2973856411_ab29a6ec76_text2live_cozy hospice_hospice_epochs_400.png
+2023-04-18 10:14:44,290 INFO class_name: hospice, extra_string_for_model: Peaceful hospice
+2023-04-18 10:14:44,298 INFO running with seed: 4292115100.
+2023-04-18 10:17:13,733 INFO copying results/2023-04-18_10-14-44-3209175436_4c6a909cd2.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/3209175436_4c6a909cd2_text2live_Peaceful hospice_hospice_epochs_300.png
+2023-04-18 10:17:14,487 INFO class_name: hospice, extra_string_for_model: Tranquil hospice
+2023-04-18 10:17:14,499 INFO running with seed: 1099241539.
+2023-04-18 10:18:58,553 INFO copying results/2023-04-18_10-17-14-3209201796_a046516ef3.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/3209201796_a046516ef3_text2live_Tranquil hospice_hospice_epochs_200.png
+2023-04-18 10:18:59,357 INFO class_name: hospice, extra_string_for_model: Compassionate hospice
+2023-04-18 10:18:59,365 INFO running with seed: 3422653303.
+2023-04-18 10:22:24,572 INFO copying results/2023-04-18_10-18-59-442372023_a30943a067.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/442372023_a30943a067_text2live_Compassionate hospice_hospice_epochs_400.png
+2023-04-18 10:22:25,679 INFO class_name: huisache, extra_string_for_model: Thorny huisache
+2023-04-18 10:22:25,696 INFO running with seed: 2744978877.
+2023-04-18 10:24:43,165 INFO copying results/2023-04-18_10-22-25-11269580_d72bd17572.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/11269580_d72bd17572_text2live_Thorny huisache_huisache_epochs_300.png
+2023-04-18 10:24:44,317 INFO class_name: huisache, extra_string_for_model: Fragrant huisache
+2023-04-18 10:24:44,329 INFO running with seed: 4111300977.
+2023-04-18 10:27:45,626 INFO copying results/2023-04-18_10-24-44-1179260896_af3026204e.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1179260896_af3026204e_text2live_Fragrant huisache_huisache_epochs_400.png
+2023-04-18 10:27:46,753 INFO class_name: huisache, extra_string_for_model: Prickly huisache
+2023-04-18 10:27:46,764 INFO running with seed: 1958633096.
+2023-04-18 10:29:24,313 INFO copying results/2023-04-18_10-27-46-1332582320_6b4241cb12.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1332582320_6b4241cb12_text2live_Prickly huisache_huisache_epochs_200.png
+2023-04-18 10:29:25,105 INFO class_name: huisache, extra_string_for_model: Aromatic huisache
+2023-04-18 10:29:25,114 INFO running with seed: 3803215380.
+2023-04-18 10:32:37,253 INFO copying results/2023-04-18_10-29-25-1357839291_de1fe7e5f1.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1357839291_de1fe7e5f1_text2live_Aromatic huisache_huisache_epochs_400.png
+2023-04-18 10:32:38,098 INFO class_name: huisache, extra_string_for_model: Thorny huisache
+2023-04-18 10:32:38,133 INFO running with seed: 26804839.
+2023-04-18 10:34:08,675 INFO copying results/2023-04-18_10-32-38-1400208592_829dd257e0.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1400208592_829dd257e0_text2live_Thorny huisache_huisache_epochs_200.png
+2023-04-18 10:34:09,604 INFO class_name: huisache, extra_string_for_model: Spiny huisache
+2023-04-18 10:34:09,622 INFO running with seed: 2825209610.
+2023-04-18 10:36:28,592 INFO copying results/2023-04-18_10-34-09-1556759387_cc33bf610f.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1556759387_cc33bf610f_text2live_Spiny huisache_huisache_epochs_300.png
+2023-04-18 10:36:29,444 INFO class_name: huisache, extra_string_for_model: Fragrant huisache
+2023-04-18 10:36:29,452 INFO running with seed: 3500907604.
+2023-04-18 10:39:26,745 INFO copying results/2023-04-18_10-36-29-1625379618_72f4115c7e.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1625379618_72f4115c7e_text2live_Fragrant huisache_huisache_epochs_400.png
+2023-04-18 10:39:27,850 INFO class_name: huisache, extra_string_for_model: Twisted huisache
+2023-04-18 10:39:27,858 INFO running with seed: 2498738989.
+2023-04-18 10:42:23,857 INFO copying results/2023-04-18_10-39-27-178979024_f2b9daeee1.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/178979024_f2b9daeee1_text2live_Twisted huisache_huisache_epochs_400.png
+2023-04-18 10:42:24,675 INFO class_name: huisache, extra_string_for_model: Prickly huisache
+2023-04-18 10:42:24,687 INFO running with seed: 3528127166.
+2023-04-18 10:45:18,285 INFO copying results/2023-04-18_10-42-24-193317531_6059fc3fdd.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/193317531_6059fc3fdd_text2live_Prickly huisache_huisache_epochs_400.png
+2023-04-18 10:45:19,424 INFO class_name: huisache, extra_string_for_model: Resilient huisache
+2023-04-18 10:45:19,439 INFO running with seed: 3146246761.
+2023-04-18 10:47:38,361 INFO copying results/2023-04-18_10-45-19-2042018663_f43eb13b6b.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/2042018663_f43eb13b6b_text2live_Resilient huisache_huisache_epochs_300.png
+2023-04-18 10:47:39,500 INFO class_name: huisache, extra_string_for_model: Fragrant huisache
+2023-04-18 10:47:39,515 INFO running with seed: 2465570504.
+2023-04-18 10:50:38,084 INFO copying results/2023-04-18_10-47-39-2185680035_252802af03.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/2185680035_252802af03_text2live_Fragrant huisache_huisache_epochs_400.png
+2023-04-18 10:50:39,039 INFO class_name: huisache, extra_string_for_model: Fragrant huisache
+2023-04-18 10:50:39,051 INFO running with seed: 1769469721.
+2023-04-18 10:52:53,207 INFO copying results/2023-04-18_10-50-39-2705245762_6d04befb56.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/2705245762_6d04befb56_text2live_Fragrant huisache_huisache_epochs_300.png
+2023-04-18 10:52:54,415 INFO class_name: huisache, extra_string_for_model: Fragrant huisache
+2023-04-18 10:52:54,427 INFO running with seed: 3579582050.
+2023-04-18 10:54:38,774 INFO copying results/2023-04-18_10-52-54-333264564_8b544ac2a1.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/333264564_8b544ac2a1_text2live_Fragrant huisache_huisache_epochs_200.png
+2023-04-18 10:54:39,567 INFO class_name: huisache, extra_string_for_model: Thorny huisache
+2023-04-18 10:54:39,579 INFO running with seed: 1260089778.
+2023-04-18 10:56:09,322 INFO copying results/2023-04-18_10-54-39-36962776_5df129a381.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/36962776_5df129a381_text2live_Thorny huisache_huisache_epochs_200.png
+2023-04-18 10:56:10,201 INFO class_name: huisache, extra_string_for_model: Fragrant huisache
+2023-04-18 10:56:10,213 INFO running with seed: 1738278445.
+2023-04-18 10:58:22,003 INFO copying results/2023-04-18_10-56-10-371553161_7258c54def.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/371553161_7258c54def_text2live_Fragrant huisache_huisache_epochs_300.png
+2023-04-18 10:58:22,849 INFO class_name: huisache, extra_string_for_model: Spiky huisache
+2023-04-18 10:58:22,861 INFO running with seed: 2678846115.
+2023-04-18 11:01:15,413 INFO copying results/2023-04-18_10-58-22-593333390_403c9b4f18.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/593333390_403c9b4f18_text2live_Spiky huisache_huisache_epochs_400.png
+2023-04-18 11:01:16,234 INFO class_name: huisache, extra_string_for_model: Aromatic huisache
+2023-04-18 11:01:16,246 INFO running with seed: 2451590303.
+2023-04-18 11:04:16,143 INFO copying results/2023-04-18_11-01-16-872818975_b7728e898f.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/872818975_b7728e898f_text2live_Aromatic huisache_huisache_epochs_400.png
+2023-04-18 11:04:17,000 INFO class_name: humanitarian, extra_string_for_model: Selfless humanitarian
+2023-04-18 11:04:17,015 INFO running with seed: 3759143611.
+2023-04-18 11:06:40,689 INFO copying results/2023-04-18_11-04-17-1356077973_0761953e77.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/1356077973_0761953e77_text2live_Selfless humanitarian_humanitarian_epochs_300.png
+2023-04-18 11:06:41,639 INFO class_name: humanitarian, extra_string_for_model: Compassionate humanitarian
+2023-04-18 11:06:41,661 INFO running with seed: 3731787304.
+2023-04-18 11:08:54,954 INFO copying results/2023-04-18_11-06-41-2048132233_f2f291d747.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2048132233_f2f291d747_text2live_Compassionate humanitarian_humanitarian_epochs_300.png
+2023-04-18 11:08:56,024 INFO class_name: humanitarian, extra_string_for_model: Selfless humanitarian
+2023-04-18 11:08:56,036 INFO running with seed: 516927356.
+2023-04-18 11:10:28,170 INFO copying results/2023-04-18_11-08-56-2243391528_c73f35fa73.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2243391528_c73f35fa73_text2live_Selfless humanitarian_humanitarian_epochs_200.png
+2023-04-18 11:10:29,351 INFO class_name: humanitarian, extra_string_for_model: Empathetic humanitarian
+2023-04-18 11:10:29,366 INFO running with seed: 2594800938.
+2023-04-18 11:13:35,161 INFO copying results/2023-04-18_11-10-29-2301920539_75e27abdf7.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2301920539_75e27abdf7_text2live_Empathetic humanitarian_humanitarian_epochs_400.png
+2023-04-18 11:13:36,088 INFO class_name: humanitarian, extra_string_for_model: Generous humanitarian
+2023-04-18 11:13:36,103 INFO running with seed: 682677086.
+2023-04-18 11:15:11,538 INFO copying results/2023-04-18_11-13-36-2352365741_e1b7707892.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2352365741_e1b7707892_text2live_Generous humanitarian_humanitarian_epochs_200.png
+2023-04-18 11:15:12,344 INFO class_name: humanitarian, extra_string_for_model: Selfless humanitarian.
+2023-04-18 11:15:12,359 INFO running with seed: 1219086533.
+2023-04-18 11:16:43,814 INFO copying results/2023-04-18_11-15-12-2489462985_3055a3b1c4.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2489462985_3055a3b1c4_text2live_Selfless humanitarian._humanitarian_epochs_200.png
+2023-04-18 11:16:44,617 INFO class_name: humanitarian, extra_string_for_model: Empathetic humanitarian.
+2023-04-18 11:16:44,629 INFO running with seed: 3315052977.
+2023-04-18 11:18:21,269 INFO copying results/2023-04-18_11-16-44-2508435551_995df72e7e.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2508435551_995df72e7e_text2live_Empathetic humanitarian._humanitarian_epochs_200.png
+2023-04-18 11:18:22,124 INFO class_name: humanitarian, extra_string_for_model: Dedicated humanitarian.
+2023-04-18 11:18:22,142 INFO running with seed: 3769405068.
+2023-04-18 11:19:58,276 INFO copying results/2023-04-18_11-18-22-2586266449_89d80e58d5.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2586266449_89d80e58d5_text2live_Dedicated humanitarian._humanitarian_epochs_200.png
+2023-04-18 11:19:59,409 INFO class_name: humanitarian, extra_string_for_model: Compassionate humanitarian.
+2023-04-18 11:19:59,420 INFO running with seed: 2780384222.
+2023-04-18 11:22:15,964 INFO copying results/2023-04-18_11-19-59-2616045541_2d3ebc6599.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2616045541_2d3ebc6599_text2live_Compassionate humanitarian._humanitarian_epochs_300.png
+2023-04-18 11:22:16,804 INFO class_name: humanitarian, extra_string_for_model: Dedicated humanitarian.
+2023-04-18 11:22:16,812 INFO running with seed: 741141227.
+2023-04-18 11:25:28,526 INFO copying results/2023-04-18_11-22-16-2784008898_66e046008c.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2784008898_66e046008c_text2live_Dedicated humanitarian._humanitarian_epochs_400.png
+2023-04-18 11:25:29,524 INFO class_name: humanitarian, extra_string_for_model: Sincere humanitarian.
+2023-04-18 11:25:29,533 INFO running with seed: 2926856112.

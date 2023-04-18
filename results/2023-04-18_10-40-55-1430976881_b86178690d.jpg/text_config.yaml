@@ -1,0 +1,7 @@
+bootstrap_epoch: 300
+bootstrap_text: American bittern
+comp_text: an image of  rusty American bittern American bittern
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  bittern/1430976881_b86178690d.jpg
+screen_text: rusty American bittern American bittern
+src_text: American bittern

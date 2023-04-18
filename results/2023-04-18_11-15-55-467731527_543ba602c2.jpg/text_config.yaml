@@ -1,0 +1,12 @@
+bootstrap_epoch: 500
+bootstrap_text: American bittern
+comp_text: 'a photo of  Sorry about that, I was having some technical issues. Here''s
+  my response:
+
+  graceful American bittern American bittern'
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  bittern/467731527_543ba602c2.jpg
+screen_text: 'Sorry about that, I was having some technical issues. Here''s my response:
+
+  graceful American bittern American bittern'
+src_text: American bittern

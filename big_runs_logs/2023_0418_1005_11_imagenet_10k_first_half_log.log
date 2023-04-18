@@ -6,3 +6,110 @@
 2023-04-18 10:07:11,088 INFO copying results/2023-04-18_10-05-12-1423980769_ba3d070a06.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/1423980769_ba3d070a06_text2live_fuzzy Alaska fur seal_Alaska fur seal_epochs_200.png
 2023-04-18 10:07:11,874 INFO class_name: Alaska fur seal, extra_string_for_model: fuzzy Alaska fur seal
 2023-04-18 10:07:11,927 INFO running with seed: 2331830572.
+2023-04-18 10:09:52,725 INFO copying results/2023-04-18_10-07-11-1423980815_5b72ec3d27.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/1423980815_5b72ec3d27_text2live_fuzzy Alaska fur seal_Alaska fur seal_epochs_300.png
+2023-04-18 10:09:53,493 INFO class_name: Alaska fur seal, extra_string_for_model: chubby Alaska fur seal
+2023-04-18 10:09:53,532 INFO running with seed: 1808142347.
+2023-04-18 10:11:44,929 INFO copying results/2023-04-18_10-09-53-1423980819_58d08da731.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/1423980819_58d08da731_text2live_chubby Alaska fur seal_Alaska fur seal_epochs_200.png
+2023-04-18 10:11:46,023 INFO class_name: Alaska fur seal, extra_string_for_model: curious Alaska fur seal
+2023-04-18 10:11:46,052 INFO running with seed: 3830636265.
+2023-04-18 10:13:33,781 INFO copying results/2023-04-18_10-11-46-163421102_615b6b41f5.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/163421102_615b6b41f5_text2live_curious Alaska fur seal_Alaska fur seal_epochs_200.png
+2023-04-18 10:13:34,833 INFO class_name: Alaska fur seal, extra_string_for_model: playful Alaska fur seal
+2023-04-18 10:13:34,882 INFO running with seed: 1453629691.
+2023-04-18 10:17:05,081 INFO copying results/2023-04-18_10-13-34-2101040985_3aba5b5e86.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/2101040985_3aba5b5e86_text2live_playful Alaska fur seal_Alaska fur seal_epochs_400.png
+2023-04-18 10:17:06,157 INFO class_name: Alaska fur seal, extra_string_for_model: majestic Alaska fur seal
+2023-04-18 10:17:06,206 INFO running with seed: 1027151532.
+2023-04-18 10:18:50,376 INFO copying results/2023-04-18_10-17-06-2101822848_3405fbf20c.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/2101822848_3405fbf20c_text2live_majestic Alaska fur seal_Alaska fur seal_epochs_200.png
+2023-04-18 10:18:51,461 INFO class_name: Alaska fur seal, extra_string_for_model: blubbery Alaska fur seal
+2023-04-18 10:18:51,490 INFO running with seed: 3359395857.
+2023-04-18 10:22:15,477 INFO copying results/2023-04-18_10-18-51-266328081_c59c125aee.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/266328081_c59c125aee_text2live_blubbery Alaska fur seal_Alaska fur seal_epochs_400.png
+2023-04-18 10:22:16,491 INFO class_name: Alaska fur seal, extra_string_for_model: fluffy Alaska fur seal
+2023-04-18 10:22:16,519 INFO running with seed: 1551107871.
+2023-04-18 10:24:02,206 INFO copying results/2023-04-18_10-22-16-290186148_efdba5799e.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/290186148_efdba5799e_text2live_fluffy Alaska fur seal_Alaska fur seal_epochs_200.png
+2023-04-18 10:24:03,233 INFO class_name: Alaska fur seal, extra_string_for_model: sleek Alaska fur seal
+2023-04-18 10:24:03,267 INFO running with seed: 1342297003.
+2023-04-18 10:25:52,176 INFO copying results/2023-04-18_10-24-03-314944278_68b06f6df4.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/314944278_68b06f6df4_text2live_sleek Alaska fur seal_Alaska fur seal_epochs_200.png
+2023-04-18 10:25:53,759 INFO class_name: Alaska fur seal, extra_string_for_model: Sorry about that, I was having some technical issues. Here's my response:
+sleepy Alaska fur seal
+2023-04-18 10:25:53,800 INFO running with seed: 391416999.
+2023-04-18 10:29:19,156 INFO copying results/2023-04-18_10-25-53-368221367_f70a5a8c6c_o.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/368221367_f70a5a8c6c_o_text2live_Sorry about that, I was having some technical issues. Here's my response:
+sleepy Alaska fur seal_Alaska fur seal_epochs_400.png
+2023-04-18 10:29:20,003 INFO class_name: Alaska fur seal, extra_string_for_model: fluffy Alaska fur seal
+2023-04-18 10:29:20,051 INFO running with seed: 773765879.
+2023-04-18 10:31:53,927 INFO copying results/2023-04-18_10-29-20-533840428_034af8ba8a.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/533840428_034af8ba8a_text2live_fluffy Alaska fur seal_Alaska fur seal_epochs_300.png
+2023-04-18 10:31:55,818 INFO class_name: Alaska fur seal, extra_string_for_model: Sorry about that, I was having some technical issues. Here's my response:
+curious Alaska fur seal
+2023-04-18 10:31:55,849 INFO running with seed: 802146368.
+2023-04-18 10:33:40,409 INFO copying results/2023-04-18_10-31-55-642908377_2c630bdeb5.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/642908377_2c630bdeb5_text2live_Sorry about that, I was having some technical issues. Here's my response:
+curious Alaska fur seal_Alaska fur seal_epochs_200.png
+2023-04-18 10:33:41,452 INFO class_name: Alaska fur seal, extra_string_for_model: graceful Alaska fur seal
+2023-04-18 10:33:41,511 INFO running with seed: 365638094.
+2023-04-18 10:36:16,590 INFO copying results/2023-04-18_10-33-41-935017751_869767a992.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/935017751_869767a992_text2live_graceful Alaska fur seal_Alaska fur seal_epochs_300.png
+2023-04-18 10:36:17,585 INFO class_name: Alaska fur seal, extra_string_for_model: blubbery Alaska fur seal
+2023-04-18 10:36:17,619 INFO running with seed: 454864516.
+2023-04-18 10:38:15,513 INFO copying results/2023-04-18_10-36-17-935865822_1adf16c6fd.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/935865822_1adf16c6fd_text2live_blubbery Alaska fur seal_Alaska fur seal_epochs_200.png
+2023-04-18 10:38:16,312 INFO class_name: American bittern, extra_string_for_model: shy American bittern
+2023-04-18 10:38:16,348 INFO running with seed: 1647768009.
+2023-04-18 10:40:54,715 INFO copying results/2023-04-18_10-38-16-136564143_cc679c514d.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/136564143_cc679c514d_text2live_shy American bittern_American bittern_epochs_300.png
+2023-04-18 10:40:55,518 INFO class_name: American bittern, extra_string_for_model: rusty American bittern
+2023-04-18 10:40:55,562 INFO running with seed: 2099285712.
+2023-04-18 10:42:46,920 INFO copying results/2023-04-18_10-40-55-1430976881_b86178690d.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/1430976881_b86178690d_text2live_rusty American bittern_American bittern_epochs_200.png
+2023-04-18 10:42:47,779 INFO class_name: American bittern, extra_string_for_model: elegant American bittern
+2023-04-18 10:42:47,819 INFO running with seed: 2806510579.
+2023-04-18 10:46:05,397 INFO copying results/2023-04-18_10-42-47-1431858768_6735f8eb56.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/1431858768_6735f8eb56_text2live_elegant American bittern_American bittern_epochs_400.png
+2023-04-18 10:46:06,225 INFO class_name: American bittern, extra_string_for_model: lonely American bittern
+2023-04-18 10:46:06,273 INFO running with seed: 474928733.
+2023-04-18 10:49:12,108 INFO copying results/2023-04-18_10-46-06-2173793873_354e0012be.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2173793873_354e0012be_text2live_lonely American bittern_American bittern_epochs_300.png
+2023-04-18 10:49:12,932 INFO class_name: American bittern, extra_string_for_model: majestic American bittern
+2023-04-18 10:49:12,969 INFO running with seed: 2079271290.
+2023-04-18 10:51:45,836 INFO copying results/2023-04-18_10-49-12-2279822853_5c98b3ae3b.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2279822853_5c98b3ae3b_text2live_majestic American bittern_American bittern_epochs_300.png
+2023-04-18 10:51:46,668 INFO class_name: American bittern, extra_string_for_model: camouflaged American bittern
+2023-04-18 10:51:46,718 INFO running with seed: 3901356517.
+2023-04-18 10:53:25,956 INFO copying results/2023-04-18_10-51-46-2302986683_c239052735.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2302986683_c239052735_text2live_camouflaged American bittern_American bittern_epochs_200.png
+2023-04-18 10:53:26,797 INFO class_name: American bittern, extra_string_for_model: curious American bittern
+2023-04-18 10:53:26,834 INFO running with seed: 2961240850.
+2023-04-18 10:57:09,886 INFO copying results/2023-04-18_10-53-26-2442430370_e85b214ba3.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2442430370_e85b214ba3_text2live_curious American bittern_American bittern_epochs_400.png
+2023-04-18 10:57:10,878 INFO class_name: American bittern, extra_string_for_model: disguised American bittern
+2023-04-18 10:57:10,907 INFO running with seed: 2648769676.
+2023-04-18 11:00:27,897 INFO copying results/2023-04-18_10-57-10-2457852855_9932175d2b.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2457852855_9932175d2b_text2live_disguised American bittern_American bittern_epochs_400.png
+2023-04-18 11:00:28,803 INFO class_name: American bittern, extra_string_for_model: shy American bittern
+2023-04-18 11:00:28,852 INFO running with seed: 4143869796.
+2023-04-18 11:03:06,718 INFO copying results/2023-04-18_11-00-28-2506574089_7c1bbf9a31.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2506574089_7c1bbf9a31_text2live_shy American bittern_American bittern_epochs_300.png
+2023-04-18 11:03:07,675 INFO class_name: American bittern, extra_string_for_model: fluffy American bittern
+2023-04-18 11:03:07,724 INFO running with seed: 1010919806.
+2023-04-18 11:06:26,040 INFO copying results/2023-04-18_11-03-07-263537285_7aec01f9a3.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/263537285_7aec01f9a3_text2live_fluffy American bittern_American bittern_epochs_400.png
+2023-04-18 11:06:27,049 INFO class_name: American bittern, extra_string_for_model: dignified American bittern
+2023-04-18 11:06:27,093 INFO running with seed: 65187769.
+2023-04-18 11:08:08,709 INFO copying results/2023-04-18_11-06-27-340613867_294d90ca2b.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/340613867_294d90ca2b_text2live_dignified American bittern_American bittern_epochs_200.png
+2023-04-18 11:08:10,541 INFO class_name: American bittern, extra_string_for_model: Sorry about that, I was having some technical issues. Here's my response:
+mysterious American bittern
+2023-04-18 11:08:10,572 INFO running with seed: 3461384339.
+2023-04-18 11:10:48,573 INFO copying results/2023-04-18_11-08-10-442702296_406b9c07f1.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/442702296_406b9c07f1_text2live_Sorry about that, I was having some technical issues. Here's my response:
+mysterious American bittern_American bittern_epochs_300.png
+2023-04-18 11:10:49,853 INFO class_name: American bittern, extra_string_for_model: mysterious American bittern
+2023-04-18 11:10:49,882 INFO running with seed: 3343538053.
+2023-04-18 11:14:11,550 INFO copying results/2023-04-18_11-10-49-466639022_43e3f2ec09.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/466639022_43e3f2ec09_text2live_mysterious American bittern_American bittern_epochs_400.png
+2023-04-18 11:14:12,697 INFO class_name: American bittern, extra_string_for_model: rusty American bittern
+2023-04-18 11:14:12,734 INFO running with seed: 1867471831.
+2023-04-18 11:15:54,204 INFO copying results/2023-04-18_11-14-12-466698470_eec986a2db.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/466698470_eec986a2db_text2live_rusty American bittern_American bittern_epochs_200.png
+2023-04-18 11:15:55,912 INFO class_name: American bittern, extra_string_for_model: Sorry about that, I was having some technical issues. Here's my response:
+graceful American bittern
+2023-04-18 11:15:55,953 INFO running with seed: 3105796253.
+2023-04-18 11:17:42,162 INFO copying results/2023-04-18_11-15-55-467731527_543ba602c2.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/467731527_543ba602c2_text2live_Sorry about that, I was having some technical issues. Here's my response:
+graceful American bittern_American bittern_epochs_200.png
+2023-04-18 11:17:42,994 INFO class_name: American bittern, extra_string_for_model: disguised American bittern
+2023-04-18 11:17:43,043 INFO running with seed: 435511259.
+2023-04-18 11:19:25,789 INFO copying results/2023-04-18_11-17-43-467874339_7e5b752c1d.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/467874339_7e5b752c1d_text2live_disguised American bittern_American bittern_epochs_200.png
+2023-04-18 11:19:26,644 INFO class_name: American crow, extra_string_for_model: mischievous American crow
+2023-04-18 11:19:26,682 INFO running with seed: 1100323150.
+2023-04-18 11:22:46,141 INFO copying results/2023-04-18_11-19-26-1177263661_feff5ef14a.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/1177263661_feff5ef14a_text2live_mischievous American crow_American crow_epochs_400.png
+2023-04-18 11:22:46,962 INFO class_name: American crow, extra_string_for_model: mischievous American crow
+2023-04-18 11:22:47,011 INFO running with seed: 3752224428.
+2023-04-18 11:24:33,203 INFO copying results/2023-04-18_11-22-46-192764767_bb60c76147.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/192764767_bb60c76147_text2live_mischievous American crow_American crow_epochs_200.png
+2023-04-18 11:24:34,037 INFO class_name: American crow, extra_string_for_model: sleek American crow
+2023-04-18 11:24:34,085 INFO running with seed: 3802801649.
+2023-04-18 11:26:55,101 INFO copying results/2023-04-18_11-24-34-2027716634_db6c807310.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2027716634_db6c807310_text2live_sleek American crow_American crow_epochs_300.png
+2023-04-18 11:26:56,203 INFO class_name: American crow, extra_string_for_model: black American crow
+2023-04-18 11:26:56,239 INFO running with seed: 4092047412.
+2023-04-18 11:29:58,648 INFO copying results/2023-04-18_11-26-56-2095537888_aa1d7725e6.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2095537888_aa1d7725e6_text2live_black American crow_American crow_epochs_400.png
+2023-04-18 11:29:59,703 INFO class_name: American crow, extra_string_for_model: talkative American crow
+2023-04-18 11:29:59,737 INFO running with seed: 116556242.
