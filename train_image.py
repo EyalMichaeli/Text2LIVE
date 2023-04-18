@@ -2,6 +2,7 @@ import random
 from argparse import ArgumentParser
 import datetime
 from pathlib import Path
+import logging
 
 import imageio
 import numpy as np
@@ -27,7 +28,7 @@ def train_model(config, device):
             random.seed(seed)
             np.random.seed(seed)
             torch.manual_seed(seed)
-    print(f"running with seed: {seed}.")
+    logging.info(f"running with seed: {seed}.")
 
     # create dataset, loader
     dataset = SingleImageDataset(config)

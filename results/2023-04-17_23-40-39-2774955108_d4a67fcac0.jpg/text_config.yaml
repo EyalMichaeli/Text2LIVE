@@ -1,0 +1,6 @@
+bootstrap_epoch: 500
+bootstrap_text: hospice
+comp_text: high quality image of  serene hospice hospice
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/2774955108_d4a67fcac0.jpg
+screen_text: serene hospice hospice
+src_text: hospice

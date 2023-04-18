@@ -1,0 +1,8 @@
+2023-04-18 10:05:11,484 INFO using device: cuda:3
+2023-04-18 10:05:11,657 INFO len(imagenet_image_paths): 7707
+2023-04-18 10:05:11,657 INFO index_to_split: 7707
+2023-04-18 10:05:12,583 INFO class_name: Alaska fur seal, extra_string_for_model: fuzzy Alaska fur seal
+2023-04-18 10:05:12,627 INFO running with seed: 3411580345.
+2023-04-18 10:07:11,088 INFO copying results/2023-04-18_10-05-12-1423980769_ba3d070a06.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/1423980769_ba3d070a06_text2live_fuzzy Alaska fur seal_Alaska fur seal_epochs_200.png
+2023-04-18 10:07:11,874 INFO class_name: Alaska fur seal, extra_string_for_model: fuzzy Alaska fur seal
+2023-04-18 10:07:11,927 INFO running with seed: 2331830572.

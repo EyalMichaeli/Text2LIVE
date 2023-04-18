@@ -16,6 +16,7 @@ from tqdm import tqdm
 import cv2
 from PIL import Image
 import glob
+import logging
 from datasets.image_dataset import SingleImageDataset
 from models.clip_extractor import ClipExtractor
 from models.image_model import Model
@@ -24,6 +25,7 @@ from util.util import tensor2im, get_optimizer
 from train_image import train_model, save_locally
 
 from image_text_tools.gpt_methods import get_gpt_response
+from util.logging import init_logging
 
 
 def visualize_output(results_folder: str, title: str = ""):
@@ -56,7 +58,7 @@ def visualize_output(results_folder: str, title: str = ""):
 
 def main(args, config_path, complete_text: str = None, n_epochs=400, visualize=False, device="cuda:0", verbose=False):
     if verbose:
-        print(f"device: {device}")
+        logging.info(f"device: {device}")
 
     with open(config_path, "r") as f:
         config = yaml.safe_load(f)
@@ -147,7 +149,7 @@ def run_on_imagenet_image(image_path, config_path, example_config_name, n_epochs
         extra_string_for_model = get_gpt_response(text=class_name)
     else:
         extra_string_for_model = random.choice(["old", "new", "pretty", "good looking", "ugly", "bad", "nice", "beautiful"])
-    print(f"class_name: {class_name}, extra_string_for_model: {extra_string_for_model}")
+    logging.info(f"class_name: {class_name}, extra_string_for_model: {extra_string_for_model}")
     target_text = f'{extra_string_for_model} {class_name}'
     if text_config_dict is None:
         text_config_dict = {
@@ -159,7 +161,7 @@ def run_on_imagenet_image(image_path, config_path, example_config_name, n_epochs
                     'bootstrap_epoch': random.choice([200, 300, 400, 500])
                 }
     if verbose:
-        print(f"text_config_dict: {text_config_dict}")
+        logging.info(f"text_config_dict: {text_config_dict}")
 
     output_folder = wrapped_main_func(config_path, example_config_name, text_config_dict, n_epochs, visualize=visualze, device=device, verbose=verbose)
     return output_folder, f"{extra_string_for_model}_{class_name}"
@@ -169,21 +171,24 @@ def run_on_imagenet_image(image_path, config_path, example_config_name, n_epochs
 
 
 if __name__ == "__main__":    
-
+    
     NUM_RUNS_FOR_EACH_IMAGE = 1
+    RUN_NAME = "imagenet_10k_first_half"
 
     config_path = "./configs/image_config.yaml"
     example_config_name = f"template.yaml"  
-    device = torch.device("cuda:2")
+    device = torch.device("cuda:3")  # change gpu ID and index_to_split if u want to run parallely
 
-    print(f"using device: {device}")
+    init_logging(run_name=f"{RUN_NAME}")
+
+    logging.info(f"using device: {device}")
 
     imagenet_image_paths = sorted(list(glob.glob("/mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/*/*.jpg")))
     # take only half 
     index_to_split = len(imagenet_image_paths)//2
     imagenet_image_paths = imagenet_image_paths[: index_to_split]
-    print(f"len(imagenet_image_paths): {len(imagenet_image_paths)}")
-    print(f"index_to_split: {index_to_split}")
+    logging.info(f"len(imagenet_image_paths): {len(imagenet_image_paths)}")
+    logging.info(f"index_to_split: {index_to_split}")
 
     # run once on each imagenet image:
     for image_path in tqdm(imagenet_image_paths):
@@ -202,7 +207,7 @@ if __name__ == "__main__":
             # copy the file to the imagenet class folder, with the name consisting of the epoch number and the image name
             target_file_name = f"{image_name}_text2live_{edited_class_string}_epochs_{n_epochs}.png"
             target_path = Path(image_path).parent / target_file_name
-            print(f"copying {file_path_to_copy} to {target_path}")
+            logging.info(f"copying {file_path_to_copy} to {target_path}")
             shutil.copy(file_path_to_copy, target_path)
 
         

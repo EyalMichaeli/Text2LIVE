@@ -1,0 +1,6 @@
+bootstrap_epoch: 200
+bootstrap_text: hospice
+comp_text: a high quality image of  peaceful hospice hospice
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/274463281_ddaeaadf88.jpg
+screen_text: peaceful hospice hospice
+src_text: hospice

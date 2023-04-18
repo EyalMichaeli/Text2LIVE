@@ -1,6 +1,11 @@
 import openai
 
-openai.api_key = "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"
+
+# instead of the above line, you can also use the following line:
+with open("openai_api_key.txt", "r") as f:
+    line = f.readline()
+    openai.api_key = line
+
 
 first_message = "I want you to learn a new task, read carefully:\nI'm going to give you a class name, like: 'tiger', 'dog', 'plane', 'flower' etc.\nAnd I want you to come up with an adjective for this class, that would not fit EXACTLY to the image, rather change it just a bit, just the style of the class. \nThis should be random each time I ask.\n\na few good examples:\ntiger: old tiger\ntiger: big tiger\ntiger: white tiger\ndog: scary dog\ndog: fluffy dog\ndog: happy dog\ndog: muscular dog\ndog: skinny dog\ndog: black dog\nplane: old plane\nplane: new plane\nplane: big plane\nplane: white plane\nplane: dirty plane\nflower: pretty flower\nflower: a dying flower\nflower: a beautiful flower\ncar: shiny car\ncar: luxurious car\ncar: sports car\ncar: dirty car\ncar: clean car\n\na few bad examples:\ntiger: tiny tiger (changes the object itself, not just the style)\ntiger: fake tiger (too far from the truth)\ndog: German shepherd dog (might be too far from the truth)\ncat: transparent cat (doesn't make sense)\nplane: tiny plane (doesn't make sense)\nyou got the idea.\nPlease respond with ONLY the edited text, no need for any other text, until i say 'you are free'"
 
@@ -51,4 +56,5 @@ def get_gpt_response(text, bot_messeges=BOT_MESSAGES_IMAGENET):
 
 
 if __name__ == "__main__":
+    # just a test
     print(get_gpt_response("plane"))
