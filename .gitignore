@@ -3,3 +3,4 @@ __pycache__/
 /idea
 openai_api_key.txt
 ```
+results/
