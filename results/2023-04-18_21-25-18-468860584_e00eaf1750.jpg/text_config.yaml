@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: ice maker
+comp_text: an  sparkling ice maker ice maker
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice
+  maker/468860584_e00eaf1750.jpg
+screen_text: sparkling ice maker ice maker
+src_text: ice maker

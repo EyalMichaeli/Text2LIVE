@@ -1,0 +1,7 @@
+bootstrap_epoch: 200
+bootstrap_text: ice maker
+comp_text: the  Compact ice maker. ice maker
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice
+  maker/1777667415_490129c221.jpg
+screen_text: Compact ice maker. ice maker
+src_text: ice maker

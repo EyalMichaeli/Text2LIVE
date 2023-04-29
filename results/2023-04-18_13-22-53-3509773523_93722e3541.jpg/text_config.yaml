@@ -1,0 +1,6 @@
+bootstrap_epoch: 200
+bootstrap_text: humanitarian
+comp_text: a high quality image of  selfless humanitarian humanitarian
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/3509773523_93722e3541.jpg
+screen_text: selfless humanitarian humanitarian
+src_text: humanitarian

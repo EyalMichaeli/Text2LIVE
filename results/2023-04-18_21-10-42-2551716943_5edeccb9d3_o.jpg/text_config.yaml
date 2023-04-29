@@ -1,0 +1,7 @@
+bootstrap_epoch: 300
+bootstrap_text: Asian horseshoe crab
+comp_text: a  spiky Asian horseshoe crab Asian horseshoe crab
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Asian
+  horseshoe crab/2551716943_5edeccb9d3_o.jpg
+screen_text: spiky Asian horseshoe crab Asian horseshoe crab
+src_text: Asian horseshoe crab

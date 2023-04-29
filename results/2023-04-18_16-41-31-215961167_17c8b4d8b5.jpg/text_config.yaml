@@ -1,0 +1,6 @@
+bootstrap_epoch: 500
+bootstrap_text: hyssop
+comp_text: an image of  Fragrant hyssop. hyssop
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/215961167_17c8b4d8b5.jpg
+screen_text: Fragrant hyssop. hyssop
+src_text: hyssop

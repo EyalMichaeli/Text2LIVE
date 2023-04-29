@@ -1,0 +1,7 @@
+bootstrap_epoch: 200
+bootstrap_text: American organ
+comp_text: the  Retro American organ American organ
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  organ/2236215361_2c7cc50d2c.jpg
+screen_text: Retro American organ American organ
+src_text: American organ

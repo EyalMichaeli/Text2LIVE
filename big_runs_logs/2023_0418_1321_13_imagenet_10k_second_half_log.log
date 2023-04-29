@@ -1,0 +1,156 @@
+2023-04-18 13:21:13,771 INFO using device: cuda:2
+2023-04-18 13:21:13,806 INFO len(imagenet_image_paths): 7708
+2023-04-18 13:21:13,806 INFO index_to_split: 7707
+2023-04-18 13:21:13,808 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/274463281_ddaeaadf88.jpg because we already ran on it 4 times
+2023-04-18 13:21:13,809 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/274463286_dcc7491802.jpg because we already ran on it 4 times
+2023-04-18 13:21:13,809 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/2774955108_d4a67fcac0.jpg because we already ran on it 4 times
+2023-04-18 13:21:13,809 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/2973856411_ab29a6ec76.jpg because we already ran on it 4 times
+2023-04-18 13:21:13,810 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/3209175436_4c6a909cd2.jpg because we already ran on it 4 times
+2023-04-18 13:21:13,810 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/3209201796_a046516ef3.jpg because we already ran on it 4 times
+2023-04-18 13:21:13,810 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/442372023_a30943a067.jpg because we already ran on it 4 times
+2023-04-18 13:21:13,810 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/11269580_d72bd17572.jpg because we already ran on it 3 times
+2023-04-18 13:21:13,811 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1179260896_af3026204e.jpg because we already ran on it 3 times
+2023-04-18 13:21:13,811 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1332582320_6b4241cb12.jpg because we already ran on it 3 times
+2023-04-18 13:21:13,811 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1357839291_de1fe7e5f1.jpg because we already ran on it 3 times
+2023-04-18 13:21:13,811 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1400208592_829dd257e0.jpg because we already ran on it 3 times
+2023-04-18 13:21:13,812 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1556759387_cc33bf610f.jpg because we already ran on it 3 times
+2023-04-18 13:21:13,812 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1625379618_72f4115c7e.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,812 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/178979024_f2b9daeee1.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,812 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/193317531_6059fc3fdd.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,813 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/2042018663_f43eb13b6b.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,813 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/2185680035_252802af03.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,813 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/2705245762_6d04befb56.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,814 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/333264564_8b544ac2a1.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,814 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/36962776_5df129a381.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,814 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/371553161_7258c54def.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,814 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/593333390_403c9b4f18.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,815 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/872818975_b7728e898f.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,815 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/1356077973_0761953e77.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,815 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2048132233_f2f291d747.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,815 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2243391528_c73f35fa73.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,816 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2301920539_75e27abdf7.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,816 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2352365741_e1b7707892.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,816 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2489462985_3055a3b1c4.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,817 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2508435551_995df72e7e.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,817 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2586266449_89d80e58d5.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,817 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2616045541_2d3ebc6599.jpg because we already ran on it 2 times
+2023-04-18 13:21:13,817 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2784008898_66e046008c.jpg because we already ran on it 2 times
+2023-04-18 13:21:14,933 INFO class_name: humanitarian, extra_string_for_model: compassionate humanitarian
+2023-04-18 13:21:14,948 INFO running with seed: 1803423871.
+2023-04-18 13:22:53,065 INFO copying results/2023-04-18_13-21-14-3504561633_345e033ff4.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/3504561633_345e033ff4_text2live_compassionate humanitarian_humanitarian_epochs_200.png
+2023-04-18 13:22:53,900 INFO class_name: humanitarian, extra_string_for_model: selfless humanitarian
+2023-04-18 13:22:53,909 INFO running with seed: 1324622073.
+2023-04-18 13:25:47,895 INFO copying results/2023-04-18_13-22-53-3509773523_93722e3541.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/3509773523_93722e3541_text2live_selfless humanitarian_humanitarian_epochs_400.png
+2023-04-18 13:25:48,828 INFO class_name: humanitarian, extra_string_for_model: dedicated humanitarian
+2023-04-18 13:25:48,846 INFO running with seed: 3551323326.
+2023-04-18 13:28:44,912 INFO copying results/2023-04-18_13-25-48-3719581103_02fa717e44.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/3719581103_02fa717e44_text2live_dedicated humanitarian_humanitarian_epochs_400.png
+2023-04-18 13:28:45,704 INFO class_name: humanitarian, extra_string_for_model: compassionate humanitarian
+2023-04-18 13:28:45,724 INFO running with seed: 1593453694.
+2023-04-18 13:30:54,544 INFO copying results/2023-04-18_13-28-45-434774929_4acf4a3ec9.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/434774929_4acf4a3ec9_text2live_compassionate humanitarian_humanitarian_epochs_300.png
+2023-04-18 13:30:55,431 INFO class_name: humanitarian, extra_string_for_model: Generous humanitarian
+2023-04-18 13:30:55,448 INFO running with seed: 2771013183.
+2023-04-18 13:32:24,648 INFO copying results/2023-04-18_13-30-55-454698403_16efb902f3.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/454698403_16efb902f3_text2live_Generous humanitarian_humanitarian_epochs_200.png
+2023-04-18 13:32:25,548 INFO class_name: humanitarian, extra_string_for_model: Global humanitarian
+2023-04-18 13:32:25,563 INFO running with seed: 1844694422.
+2023-04-18 13:34:39,958 INFO copying results/2023-04-18_13-32-25-6676422_a1b3ce1934.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/6676422_a1b3ce1934_text2live_Global humanitarian_humanitarian_epochs_300.png
+2023-04-18 13:34:40,971 INFO class_name: hunter's sauce, extra_string_for_model: Smoky hunter's sauce
+2023-04-18 13:34:40,987 INFO running with seed: 2016298778.
+2023-04-18 13:37:39,844 INFO copying results/2023-04-18_13-34-40-1942071862_e27308a6ef.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/1942071862_e27308a6ef_text2live_Smoky hunter's sauce_hunter's sauce_epochs_400.png
+2023-04-18 13:37:40,591 INFO class_name: hunter's sauce, extra_string_for_model: Savory hunter's sauce
+2023-04-18 13:37:40,603 INFO running with seed: 2659726860.
+2023-04-18 15:35:57,200 INFO copying results/2023-04-18_13-37-40-2052985559_f2eb5ac971.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/2052985559_f2eb5ac971_text2live_Savory hunter's sauce_hunter's sauce_epochs_400.png
+2023-04-18 15:35:58,110 INFO class_name: hunter's sauce, extra_string_for_model: Spicy hunter's sauce
+2023-04-18 15:35:58,122 INFO running with seed: 4138948593.
+2023-04-18 15:38:52,008 INFO copying results/2023-04-18_15-35-58-2222650773_663ff459c1.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/2222650773_663ff459c1_text2live_Spicy hunter's sauce_hunter's sauce_epochs_400.png
+2023-04-18 15:38:52,810 INFO class_name: hunter's sauce, extra_string_for_model: Tangy hunter's sauce
+2023-04-18 15:38:52,825 INFO running with seed: 2176914796.
+2023-04-18 16:07:33,037 INFO copying results/2023-04-18_15-38-52-2408397555_209903dee2.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/2408397555_209903dee2_text2live_Tangy hunter's sauce_hunter's sauce_epochs_300.png
+2023-04-18 16:07:33,906 INFO class_name: hunter's sauce, extra_string_for_model: Savory hunter's sauce.
+2023-04-18 16:07:33,914 INFO running with seed: 2580480825.
+2023-04-18 16:09:39,596 INFO copying results/2023-04-18_16-07-33-3021088748_87a291f47a.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/3021088748_87a291f47a_text2live_Savory hunter's sauce._hunter's sauce_epochs_300.png
+2023-04-18 16:09:40,383 INFO class_name: hunter's sauce, extra_string_for_model: Chunky hunter's sauce.
+2023-04-18 16:09:40,399 INFO running with seed: 1741073462.
+2023-04-18 16:11:45,008 INFO copying results/2023-04-18_16-09-40-3145921055_6e5e44796b.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/3145921055_6e5e44796b_text2live_Chunky hunter's sauce._hunter's sauce_epochs_300.png
+2023-04-18 16:11:46,095 INFO class_name: hunter's sauce, extra_string_for_model: Homemade hunter's sauce.
+2023-04-18 16:11:46,111 INFO running with seed: 3207468820.
+2023-04-18 16:25:19,000 INFO copying results/2023-04-18_16-11-46-3662788069_6a9e24443d_o.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/3662788069_6a9e24443d_o_text2live_Homemade hunter's sauce._hunter's sauce_epochs_300.png
+2023-04-18 16:25:20,122 INFO class_name: hunter's sauce, extra_string_for_model: Bold hunter's sauce.
+2023-04-18 16:25:20,139 INFO running with seed: 3033837111.
+2023-04-18 16:26:42,280 INFO copying results/2023-04-18_16-25-20-3777038398_f6bdb9269f.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/3777038398_f6bdb9269f_text2live_Bold hunter's sauce._hunter's sauce_epochs_200.png
+2023-04-18 16:26:43,068 INFO class_name: hunter's sauce, extra_string_for_model: Smokey hunter's sauce.
+2023-04-18 16:26:43,083 INFO running with seed: 2657885918.
+2023-04-18 16:29:20,673 INFO copying results/2023-04-18_16-26-43-4025211980_c77ea7cefd.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/4025211980_c77ea7cefd_text2live_Smokey hunter's sauce._hunter's sauce_epochs_400.png
+2023-04-18 16:29:21,594 INFO class_name: hunter's sauce, extra_string_for_model: Hearty hunter's sauce.
+2023-04-18 16:29:21,609 INFO running with seed: 2115460353.
+2023-04-18 16:30:44,567 INFO copying results/2023-04-18_16-29-21-4026608894_43b7e26c34.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/4026608894_43b7e26c34_text2live_Hearty hunter's sauce._hunter's sauce_epochs_200.png
+2023-04-18 16:30:45,346 INFO class_name: hunter's sauce, extra_string_for_model: Tasty hunter's sauce.
+2023-04-18 16:30:45,363 INFO running with seed: 1547517257.
+2023-04-18 16:32:11,078 INFO copying results/2023-04-18_16-30-45-4036450066_0af6d675fc_o.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/4036450066_0af6d675fc_o_text2live_Tasty hunter's sauce._hunter's sauce_epochs_200.png
+2023-04-18 16:32:12,448 INFO class_name: hunter's sauce, extra_string_for_model: Hearty hunter's sauce.
+2023-04-18 16:32:12,471 INFO running with seed: 1409466089.
+2023-04-18 16:33:31,070 INFO copying results/2023-04-18_16-32-12-67431774_0470df3c08.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/67431774_0470df3c08_text2live_Hearty hunter's sauce._hunter's sauce_epochs_200.png
+2023-04-18 16:33:32,020 INFO class_name: hunter's sauce, extra_string_for_model: Savory hunter's sauce.
+2023-04-18 16:33:32,035 INFO running with seed: 2102960447.
+2023-04-18 16:36:10,792 INFO copying results/2023-04-18_16-33-32-67432060_648d836d1b.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/67432060_648d836d1b_text2live_Savory hunter's sauce._hunter's sauce_epochs_400.png
+2023-04-18 16:36:11,681 INFO class_name: hunter's sauce, extra_string_for_model: Creamy hunter's sauce.
+2023-04-18 16:36:11,695 INFO running with seed: 1987258678.
+2023-04-18 16:38:08,015 INFO copying results/2023-04-18_16-36-11-990144934_88aa39bc8d_o.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/990144934_88aa39bc8d_o_text2live_Creamy hunter's sauce._hunter's sauce_epochs_300.png
+2023-04-18 16:38:08,934 INFO class_name: hyssop, extra_string_for_model: Fragrant hyssop.
+2023-04-18 16:38:08,951 INFO running with seed: 3989086273.
+2023-04-18 16:40:10,021 INFO copying results/2023-04-18_16-38-08-1439855011_89cb7ae165.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/1439855011_89cb7ae165_text2live_Fragrant hyssop._hyssop_epochs_300.png
+2023-04-18 16:40:11,103 INFO class_name: hyssop, extra_string_for_model: Sweet hyssop.
+2023-04-18 16:40:11,119 INFO running with seed: 1451922259.
+2023-04-18 16:41:30,621 INFO copying results/2023-04-18_16-40-11-187780182_64c2cb79cc.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/187780182_64c2cb79cc_text2live_Sweet hyssop._hyssop_epochs_200.png
+2023-04-18 16:41:31,435 INFO class_name: hyssop, extra_string_for_model: Fragrant hyssop.
+2023-04-18 16:41:31,451 INFO running with seed: 349390870.
+2023-04-18 16:44:02,488 INFO copying results/2023-04-18_16-41-31-215961167_17c8b4d8b5.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/215961167_17c8b4d8b5_text2live_Fragrant hyssop._hyssop_epochs_400.png
+2023-04-18 16:44:03,310 INFO class_name: hyssop, extra_string_for_model: aromatic hyssop.
+2023-04-18 16:44:03,324 INFO running with seed: 2337009662.
+2023-04-18 16:46:03,564 INFO copying results/2023-04-18_16-44-03-2228133179_c289710033.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/2228133179_c289710033_text2live_aromatic hyssop._hyssop_epochs_300.png
+2023-04-18 16:46:04,447 INFO class_name: hyssop, extra_string_for_model: Healing hyssop.
+2023-04-18 16:46:04,463 INFO running with seed: 1180285767.
+2023-04-18 16:48:37,127 INFO copying results/2023-04-18_16-46-04-2821768622_3198272d58.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/2821768622_3198272d58_text2live_Healing hyssop._hyssop_epochs_400.png
+2023-04-18 16:48:38,151 INFO class_name: hyssop, extra_string_for_model: Flowering hyssop.
+2023-04-18 16:48:38,167 INFO running with seed: 687727945.
+2023-04-18 16:51:17,846 INFO copying results/2023-04-18_16-48-38-3137166408_52621de002.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/3137166408_52621de002_text2live_Flowering hyssop._hyssop_epochs_400.png
+2023-04-18 16:51:18,627 INFO class_name: hyssop, extra_string_for_model: Soothing hyssop.
+2023-04-18 16:51:18,642 INFO running with seed: 3971271206.
+2023-04-18 16:53:10,653 INFO copying results/2023-04-18_16-51-18-351941608_5d78382617.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/351941608_5d78382617_text2live_Soothing hyssop._hyssop_epochs_300.png
+2023-04-18 16:53:11,448 INFO class_name: hyssop, extra_string_for_model: Minty hyssop.
+2023-04-18 16:53:11,465 INFO running with seed: 3526730508.
+2023-04-18 16:55:06,702 INFO copying results/2023-04-18_16-53-11-3626431224_dbdec852ca.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/3626431224_dbdec852ca_text2live_Minty hyssop._hyssop_epochs_300.png
+2023-04-18 16:55:08,002 INFO class_name: hyssop, extra_string_for_model: Fragrant hyssop.
+2023-04-18 16:55:08,018 INFO running with seed: 231482961.
+2023-04-18 16:56:26,652 INFO copying results/2023-04-18_16-55-08-3981155377_e398571b00.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/3981155377_e398571b00_text2live_Fragrant hyssop._hyssop_epochs_200.png
+2023-04-18 16:56:27,588 INFO class_name: hyssop, extra_string_for_model: Refreshing hyssop.
+2023-04-18 16:56:27,605 INFO running with seed: 338944212.
+2023-04-18 16:58:29,773 INFO copying results/2023-04-18_16-56-27-4796360890_9081ce57d8.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/4796360890_9081ce57d8_text2live_Refreshing hyssop._hyssop_epochs_300.png
+2023-04-18 16:58:30,549 INFO class_name: hyssop, extra_string_for_model: Fragrant hyssop.
+2023-04-18 16:58:30,566 INFO running with seed: 3349671537.
+2023-04-18 16:59:48,484 INFO copying results/2023-04-18_16-58-30-4814246277_0f56b78503.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/4814246277_0f56b78503_text2live_Fragrant hyssop._hyssop_epochs_200.png
+2023-04-18 16:59:49,227 INFO class_name: hyssop, extra_string_for_model: Fragrant hyssop.
+2023-04-18 16:59:49,243 INFO running with seed: 3512050182.
+2023-04-18 17:01:47,034 INFO copying results/2023-04-18_16-59-49-4828306632_afe1907b95.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/4828306632_afe1907b95_text2live_Fragrant hyssop._hyssop_epochs_300.png
+2023-04-18 17:01:47,875 INFO class_name: hyssop, extra_string_for_model: Fragrant hyssop.
+2023-04-18 17:01:47,891 INFO running with seed: 3837771765.
+2023-04-18 17:03:11,756 INFO copying results/2023-04-18_17-01-47-4897825877_fabfc9ed9f.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/4897825877_fabfc9ed9f_text2live_Fragrant hyssop._hyssop_epochs_200.png
+2023-04-18 17:03:12,548 INFO class_name: hyssop, extra_string_for_model: Fragrant hyssop.
+2023-04-18 17:03:12,566 INFO running with seed: 1794008185.
+2023-04-18 19:05:53,772 INFO copying results/2023-04-18_17-03-12-4916854993_7541397065.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/4916854993_7541397065_text2live_Fragrant hyssop._hyssop_epochs_400.png
+2023-04-18 19:05:54,608 INFO class_name: hyssop, extra_string_for_model: Lemony hyssop.
+2023-04-18 19:05:54,623 INFO running with seed: 3546386331.
+2023-04-18 19:07:13,536 INFO copying results/2023-04-18_19-05-54-5028844161_01ffe0813d.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/5028844161_01ffe0813d_text2live_Lemony hyssop._hyssop_epochs_200.png
+2023-04-18 19:07:14,276 INFO class_name: hyssop, extra_string_for_model: Lemony hyssop.
+2023-04-18 19:07:14,294 INFO running with seed: 2642993859.
+2023-04-18 19:08:33,858 INFO copying results/2023-04-18_19-07-14-545510787_4b86e118b3.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/545510787_4b86e118b3_text2live_Lemony hyssop._hyssop_epochs_200.png
+2023-04-18 19:08:34,554 INFO class_name: hyssop, extra_string_for_model: Fragrant hyssop.
+2023-04-18 19:08:34,571 INFO running with seed: 2404478548.
+2023-04-18 19:09:55,431 INFO copying results/2023-04-18_19-08-34-839167318_6a46da8bee.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/839167318_6a46da8bee_text2live_Fragrant hyssop._hyssop_epochs_200.png
+2023-04-18 19:09:56,131 INFO class_name: ice maker, extra_string_for_model: Portable ice maker.
+2023-04-18 19:09:56,147 INFO running with seed: 3914706714.
+2023-04-18 20:48:04,354 INFO copying results/2023-04-18_19-09-56-1464695645_71589c24e7.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/1464695645_71589c24e7_text2live_Portable ice maker._ice maker_epochs_200.png
+2023-04-18 20:48:05,168 INFO class_name: ice maker, extra_string_for_model: Chilled ice maker.
+2023-04-18 20:48:05,183 INFO running with seed: 3525018712.
+2023-04-18 20:49:55,241 INFO copying results/2023-04-18_20-48-05-1469999457_acf4312748.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/1469999457_acf4312748_text2live_Chilled ice maker._ice maker_epochs_300.png
+2023-04-18 20:49:56,196 INFO class_name: ice maker, extra_string_for_model: Compact ice maker.
+2023-04-18 20:49:56,214 INFO running with seed: 3358867260.

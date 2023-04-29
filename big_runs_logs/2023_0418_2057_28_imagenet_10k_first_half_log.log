@@ -1,0 +1,114 @@
+2023-04-18 20:57:28,933 INFO using device: cuda:2
+2023-04-18 20:57:28,981 INFO len(imagenet_image_paths): 7707
+2023-04-18 20:57:28,981 INFO index_to_split: 7707
+2023-04-18 20:57:28,984 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/1423980769_ba3d070a06.jpg because we already ran on it 4 times
+2023-04-18 20:57:28,985 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/1423980815_5b72ec3d27.jpg because we already ran on it 4 times
+2023-04-18 20:57:28,985 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/1423980819_58d08da731.jpg because we already ran on it 4 times
+2023-04-18 20:57:28,985 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/163421102_615b6b41f5.jpg because we already ran on it 4 times
+2023-04-18 20:57:28,986 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/2101040985_3aba5b5e86.jpg because we already ran on it 4 times
+2023-04-18 20:57:28,986 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/2101822848_3405fbf20c.jpg because we already ran on it 4 times
+2023-04-18 20:57:28,987 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/266328081_c59c125aee.jpg because we already ran on it 4 times
+2023-04-18 20:57:28,987 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/290186148_efdba5799e.jpg because we already ran on it 3 times
+2023-04-18 20:57:28,987 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/314944278_68b06f6df4.jpg because we already ran on it 3 times
+2023-04-18 20:57:28,988 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/368221367_f70a5a8c6c_o.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,988 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/533840428_034af8ba8a.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,989 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/642908377_2c630bdeb5.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,989 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/935017751_869767a992.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,989 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/935865822_1adf16c6fd.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,990 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/136564143_cc679c514d.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,990 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/1430976881_b86178690d.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,990 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/1431858768_6735f8eb56.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,991 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2173793873_354e0012be.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,991 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2279822853_5c98b3ae3b.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,991 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2302986683_c239052735.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,992 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2442430370_e85b214ba3.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,992 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2457852855_9932175d2b.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,992 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2506574089_7c1bbf9a31.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,993 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/263537285_7aec01f9a3.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,993 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/340613867_294d90ca2b.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,993 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/442702296_406b9c07f1.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,994 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/466639022_43e3f2ec09.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,994 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/466698470_eec986a2db.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,994 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/467731527_543ba602c2.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,995 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/467874339_7e5b752c1d.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,995 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/1177263661_feff5ef14a.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,995 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/192764767_bb60c76147.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,996 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2027716634_db6c807310.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,996 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2095537888_aa1d7725e6.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,996 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2208031502_38b0f52777.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,997 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2226807168_4a6bd17296.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,997 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2308266053_c90df2f81a.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,997 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2466210353_c4ca99bb45.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,998 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2475577181_909f29437b.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,998 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2538238280_ecf02de32b.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,998 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2672298578_c504218533.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,999 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2975254436_fb535d44d3.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,999 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/402788645_f0eb12d3b0.jpg because we already ran on it 2 times
+2023-04-18 20:57:28,999 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/448619248_6443b197b7.jpg because we already ran on it 2 times
+2023-04-18 20:57:29,000 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/490385874_fa93bbe2de.jpg because we already ran on it 2 times
+2023-04-18 20:57:29,000 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/116411145_f295a77cd9.jpg because we already ran on it 2 times
+2023-04-18 20:57:29,000 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/1451051360_8df1ce3086_b.jpg because we already ran on it 2 times
+2023-04-18 20:57:29,001 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/14830364_547364de8d.jpg because we already ran on it 2 times
+2023-04-18 20:57:29,001 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/1955230221_4ad1d78381.jpg because we already ran on it 2 times
+2023-04-18 20:57:29,001 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/2236213987_b9c197288f.jpg because we already ran on it 2 times
+2023-04-18 20:57:29,002 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/2236215361_2c7cc50d2c.jpg because we already ran on it 2 times
+2023-04-18 20:57:29,713 INFO class_name: American organ, extra_string_for_model: Vintage American organ
+2023-04-18 20:57:29,731 INFO running with seed: 2259897891.
+2023-04-18 20:59:35,362 INFO copying results/2023-04-18_20-57-29-2260157497_eca900eb4a.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/2260157497_eca900eb4a_text2live_Vintage American organ_American organ_epochs_300.png
+2023-04-18 20:59:36,052 INFO class_name: American organ, extra_string_for_model: Colorful American organ
+2023-04-18 20:59:36,067 INFO running with seed: 20318083.
+2023-04-18 21:01:07,874 INFO copying results/2023-04-18_20-59-36-2793353733_f64da7c872.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/2793353733_f64da7c872_text2live_Colorful American organ_American organ_epochs_200.png
+2023-04-18 21:01:08,543 INFO class_name: American organ, extra_string_for_model: rusty American organ
+2023-04-18 21:01:08,556 INFO running with seed: 1326367387.
+2023-04-18 21:04:00,035 INFO copying results/2023-04-18_21-01-08-3252851426_06ec93519c.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/3252851426_06ec93519c_text2live_rusty American organ_American organ_epochs_400.png
+2023-04-18 21:04:00,832 INFO class_name: American organ, extra_string_for_model: Engraved American organ
+2023-04-18 21:04:00,840 INFO running with seed: 807074870.
+2023-04-18 21:06:16,588 INFO copying results/2023-04-18_21-04-00-368184331_d86c5bafe0_o.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/368184331_d86c5bafe0_o_text2live_Engraved American organ_American organ_epochs_300.png
+2023-04-18 21:06:17,221 INFO class_name: American organ, extra_string_for_model: ornate American organ
+2023-04-18 21:06:17,233 INFO running with seed: 326813039.
+2023-04-18 21:08:22,794 INFO copying results/2023-04-18_21-06-17-452690701_a2987e8b28.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/452690701_a2987e8b28_text2live_ornate American organ_American organ_epochs_300.png
+2023-04-18 21:08:23,797 INFO class_name: Asian horseshoe crab, extra_string_for_model: Glowing Asian horseshoe crab
+2023-04-18 21:08:23,810 INFO running with seed: 2638301059.
+2023-04-18 21:10:41,560 INFO copying results/2023-04-18_21-08-23-225152870_7cc0374364.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Asian horseshoe crab/225152870_7cc0374364_text2live_Glowing Asian horseshoe crab_Asian horseshoe crab_epochs_300.png
+2023-04-18 21:10:42,596 INFO class_name: Asian horseshoe crab, extra_string_for_model: spiky Asian horseshoe crab
+2023-04-18 21:10:42,615 INFO running with seed: 1371764056.
+2023-04-18 21:12:17,755 INFO copying results/2023-04-18_21-10-42-2551716943_5edeccb9d3_o.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Asian horseshoe crab/2551716943_5edeccb9d3_o_text2live_spiky Asian horseshoe crab_Asian horseshoe crab_epochs_200.png
+2023-04-18 21:12:18,852 INFO class_name: Asian horseshoe crab, extra_string_for_model: Shimmering Asian horseshoe crab
+2023-04-18 21:12:18,865 INFO running with seed: 22452931.
+2023-04-18 21:13:47,950 INFO copying results/2023-04-18_21-12-18-2552538914_c2f50c16ba_o.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Asian horseshoe crab/2552538914_c2f50c16ba_o_text2live_Shimmering Asian horseshoe crab_Asian horseshoe crab_epochs_200.png
+2023-04-18 21:13:48,949 INFO class_name: Asian horseshoe crab, extra_string_for_model: Gleaming Asian horseshoe crab
+2023-04-18 21:13:48,964 INFO running with seed: 2653679422.
+2023-04-18 21:15:15,980 INFO copying results/2023-04-18_21-13-48-2643138257_35cdcaa239.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Asian horseshoe crab/2643138257_35cdcaa239_text2live_Gleaming Asian horseshoe crab_Asian horseshoe crab_epochs_200.png
+2023-04-18 21:15:16,668 INFO class_name: Asian horseshoe crab, extra_string_for_model: Glistening Asian horseshoe crab
+2023-04-18 21:15:16,684 INFO running with seed: 1860235038.
+2023-04-18 21:18:12,588 INFO copying results/2023-04-18_21-15-16-280856581_2968a7a46e.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Asian horseshoe crab/280856581_2968a7a46e_text2live_Glistening Asian horseshoe crab_Asian horseshoe crab_epochs_400.png
+2023-04-18 21:18:13,502 INFO class_name: Asian horseshoe crab, extra_string_for_model: magnificent Asian horseshoe crab
+2023-04-18 21:18:13,519 INFO running with seed: 1997668666.
+2023-04-18 21:20:15,879 INFO copying results/2023-04-18_21-18-13-536057248_a4c527c1db.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Asian horseshoe crab/536057248_a4c527c1db_text2live_magnificent Asian horseshoe crab_Asian horseshoe crab_epochs_300.png
+2023-04-18 21:20:17,193 INFO strange response, asking again. response: I apologize for the repetition. Here's another one:
+Fierce Asian horseshoe crab
+2023-04-18 21:20:18,745 INFO strange response, asking again. response: I'm sorry, I just realized that I repeated the same word multiple times. Here's another one:
+Graceful Asian horseshoe crab
+2023-04-18 21:20:19,469 INFO class_name: Asian horseshoe crab, extra_string_for_model: Elegant Asian horseshoe crab
+2023-04-18 21:20:19,481 INFO running with seed: 2831641561.
+2023-04-18 21:22:22,585 INFO copying results/2023-04-18_21-20-19-673448034_0519441768.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Asian horseshoe crab/673448034_0519441768_text2live_Elegant Asian horseshoe crab_Asian horseshoe crab_epochs_300.png
+2023-04-18 21:22:23,623 INFO class_name: Asian horseshoe crab, extra_string_for_model: Sleek Asian horseshoe crab
+2023-04-18 21:22:23,635 INFO running with seed: 4088507779.
+2023-04-18 21:25:20,408 INFO copying results/2023-04-18_21-22-23-808586609_5655413d4f.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Asian horseshoe crab/808586609_5655413d4f_text2live_Sleek Asian horseshoe crab_Asian horseshoe crab_epochs_400.png
+2023-04-18 21:25:21,164 INFO class_name: Asian horseshoe crab, extra_string_for_model: Giant Asian horseshoe crab
+2023-04-18 21:25:21,179 INFO running with seed: 2815811418.
+2023-04-18 21:26:45,079 INFO copying results/2023-04-18_21-25-21-945833008_77a24caf26.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Asian horseshoe crab/945833008_77a24caf26_text2live_Giant Asian horseshoe crab_Asian horseshoe crab_epochs_200.png
+2023-04-18 21:26:45,779 INFO class_name: Atlantic manta, extra_string_for_model: Graceful Atlantic manta
+2023-04-18 21:26:45,793 INFO running with seed: 3552716669.
+2023-04-18 21:30:00,698 INFO copying results/2023-04-18_21-26-45-109876136_e1795bde95.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Atlantic manta/109876136_e1795bde95_text2live_Graceful Atlantic manta_Atlantic manta_epochs_400.png
+2023-04-18 21:30:01,353 INFO class_name: Atlantic manta, extra_string_for_model: Majestic Atlantic manta
+2023-04-18 21:30:01,368 INFO running with seed: 2752252586.
+2023-04-18 21:31:25,348 INFO copying results/2023-04-18_21-30-01-1215372_f214e57acf.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Atlantic manta/1215372_f214e57acf_text2live_Majestic Atlantic manta_Atlantic manta_epochs_200.png
+2023-04-18 21:31:26,123 INFO class_name: Atlantic manta, extra_string_for_model: Gorgeous Atlantic manta
+2023-04-18 21:31:26,135 INFO running with seed: 3808199331.
+2023-04-18 21:32:51,663 INFO copying results/2023-04-18_21-31-26-2437522028_e14742eeee.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Atlantic manta/2437522028_e14742eeee_text2live_Gorgeous Atlantic manta_Atlantic manta_epochs_200.png
+2023-04-18 21:32:52,292 INFO class_name: Atlantic manta, extra_string_for_model: Gentle Atlantic manta
+2023-04-18 21:32:52,304 INFO running with seed: 2698099344.
+2023-04-18 21:35:34,778 INFO copying results/2023-04-18_21-32-52-2513873166_e72f3f283c_t.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Atlantic manta/2513873166_e72f3f283c_t_text2live_Gentle Atlantic manta_Atlantic manta_epochs_400.png
+2023-04-18 21:35:35,507 INFO class_name: Atlantic manta, extra_string_for_model: Mysterious Atlantic manta
+2023-04-18 21:35:35,520 INFO running with seed: 3477046023.

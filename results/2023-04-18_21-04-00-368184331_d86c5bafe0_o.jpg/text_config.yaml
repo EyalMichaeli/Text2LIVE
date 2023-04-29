@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: American organ
+comp_text: an  Engraved American organ American organ
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  organ/368184331_d86c5bafe0_o.jpg
+screen_text: Engraved American organ American organ
+src_text: American organ

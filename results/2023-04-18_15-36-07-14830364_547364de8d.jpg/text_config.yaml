@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: American organ
+comp_text: an image of  Rustic American organ American organ
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  organ/14830364_547364de8d.jpg
+screen_text: Rustic American organ American organ
+src_text: American organ

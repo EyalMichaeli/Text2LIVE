@@ -1,0 +1,7 @@
+bootstrap_epoch: 400
+bootstrap_text: American organ
+comp_text: an image of  Soulful American organ American organ
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  organ/2260157497_eca900eb4a.jpg
+screen_text: Soulful American organ American organ
+src_text: American organ

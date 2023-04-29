@@ -1,0 +1,56 @@
+2023-04-18 20:56:43,608 INFO using device: cuda:2
+2023-04-18 20:56:43,656 INFO len(imagenet_image_paths): 7707
+2023-04-18 20:56:43,656 INFO index_to_split: 7707
+2023-04-18 20:56:43,659 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/1423980769_ba3d070a06.jpg because we already ran on it 4 times
+2023-04-18 20:56:43,660 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/1423980815_5b72ec3d27.jpg because we already ran on it 4 times
+2023-04-18 20:56:43,660 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/1423980819_58d08da731.jpg because we already ran on it 4 times
+2023-04-18 20:56:43,660 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/163421102_615b6b41f5.jpg because we already ran on it 4 times
+2023-04-18 20:56:43,661 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/2101040985_3aba5b5e86.jpg because we already ran on it 4 times
+2023-04-18 20:56:43,661 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/2101822848_3405fbf20c.jpg because we already ran on it 4 times
+2023-04-18 20:56:43,661 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/266328081_c59c125aee.jpg because we already ran on it 4 times
+2023-04-18 20:56:43,662 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/290186148_efdba5799e.jpg because we already ran on it 3 times
+2023-04-18 20:56:43,662 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/314944278_68b06f6df4.jpg because we already ran on it 3 times
+2023-04-18 20:56:43,663 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/368221367_f70a5a8c6c_o.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,663 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/533840428_034af8ba8a.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,663 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/642908377_2c630bdeb5.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,664 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/935017751_869767a992.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,664 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/Alaska fur seal/935865822_1adf16c6fd.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,664 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/136564143_cc679c514d.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,665 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/1430976881_b86178690d.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,665 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/1431858768_6735f8eb56.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,665 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2173793873_354e0012be.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,666 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2279822853_5c98b3ae3b.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,666 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2302986683_c239052735.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,666 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2442430370_e85b214ba3.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,667 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2457852855_9932175d2b.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,667 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/2506574089_7c1bbf9a31.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,667 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/263537285_7aec01f9a3.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,667 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/340613867_294d90ca2b.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,668 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/442702296_406b9c07f1.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,668 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/466639022_43e3f2ec09.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,668 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/466698470_eec986a2db.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,669 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/467731527_543ba602c2.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,669 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American bittern/467874339_7e5b752c1d.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,669 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/1177263661_feff5ef14a.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,670 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/192764767_bb60c76147.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,670 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2027716634_db6c807310.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,670 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2095537888_aa1d7725e6.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,671 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2208031502_38b0f52777.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,671 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2226807168_4a6bd17296.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,671 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2308266053_c90df2f81a.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,672 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2466210353_c4ca99bb45.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,672 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2475577181_909f29437b.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,672 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2538238280_ecf02de32b.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,672 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2672298578_c504218533.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,673 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/2975254436_fb535d44d3.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,673 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/402788645_f0eb12d3b0.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,673 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/448619248_6443b197b7.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,674 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American crow/490385874_fa93bbe2de.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,674 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/116411145_f295a77cd9.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,674 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/1451051360_8df1ce3086_b.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,675 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/14830364_547364de8d.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,675 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/1955230221_4ad1d78381.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,675 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/2236213987_b9c197288f.jpg because we already ran on it 2 times
+2023-04-18 20:56:43,676 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American organ/2236215361_2c7cc50d2c.jpg because we already ran on it 2 times
+2023-04-18 20:56:44,441 INFO class_name: American organ, extra_string_for_model: vintage organ
+2023-04-18 20:56:44,458 INFO running with seed: 3662978179.

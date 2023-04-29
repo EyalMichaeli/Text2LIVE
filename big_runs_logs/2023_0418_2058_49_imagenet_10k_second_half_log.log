@@ -1,0 +1,132 @@
+2023-04-18 20:58:49,455 INFO using device: cuda:3
+2023-04-18 20:58:49,491 INFO len(imagenet_image_paths): 7708
+2023-04-18 20:58:49,491 INFO index_to_split: 7707
+2023-04-18 20:58:49,493 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/274463281_ddaeaadf88.jpg because we already ran on it 4 times
+2023-04-18 20:58:49,494 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/274463286_dcc7491802.jpg because we already ran on it 4 times
+2023-04-18 20:58:49,494 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/2774955108_d4a67fcac0.jpg because we already ran on it 4 times
+2023-04-18 20:58:49,494 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/2973856411_ab29a6ec76.jpg because we already ran on it 4 times
+2023-04-18 20:58:49,495 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/3209175436_4c6a909cd2.jpg because we already ran on it 4 times
+2023-04-18 20:58:49,495 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/3209201796_a046516ef3.jpg because we already ran on it 4 times
+2023-04-18 20:58:49,495 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hospice/442372023_a30943a067.jpg because we already ran on it 4 times
+2023-04-18 20:58:49,495 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/11269580_d72bd17572.jpg because we already ran on it 3 times
+2023-04-18 20:58:49,496 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1179260896_af3026204e.jpg because we already ran on it 3 times
+2023-04-18 20:58:49,496 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1332582320_6b4241cb12.jpg because we already ran on it 3 times
+2023-04-18 20:58:49,496 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1357839291_de1fe7e5f1.jpg because we already ran on it 3 times
+2023-04-18 20:58:49,496 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1400208592_829dd257e0.jpg because we already ran on it 3 times
+2023-04-18 20:58:49,497 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1556759387_cc33bf610f.jpg because we already ran on it 3 times
+2023-04-18 20:58:49,497 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/1625379618_72f4115c7e.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,497 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/178979024_f2b9daeee1.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,497 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/193317531_6059fc3fdd.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,498 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/2042018663_f43eb13b6b.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,498 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/2185680035_252802af03.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,498 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/2705245762_6d04befb56.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,498 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/333264564_8b544ac2a1.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,499 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/36962776_5df129a381.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,499 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/371553161_7258c54def.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,499 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/593333390_403c9b4f18.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,500 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/huisache/872818975_b7728e898f.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,500 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/1356077973_0761953e77.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,500 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2048132233_f2f291d747.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,500 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2243391528_c73f35fa73.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,501 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2301920539_75e27abdf7.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,501 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2352365741_e1b7707892.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,501 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2489462985_3055a3b1c4.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,501 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2508435551_995df72e7e.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,502 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2586266449_89d80e58d5.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,502 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2616045541_2d3ebc6599.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,502 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/2784008898_66e046008c.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,502 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/3504561633_345e033ff4.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,503 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/3509773523_93722e3541.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,503 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/3719581103_02fa717e44.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,503 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/434774929_4acf4a3ec9.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,503 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/454698403_16efb902f3.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,504 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/humanitarian/6676422_a1b3ce1934.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,504 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/1942071862_e27308a6ef.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,504 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/2052985559_f2eb5ac971.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,504 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/2222650773_663ff459c1.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,505 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/2408397555_209903dee2.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,505 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/3021088748_87a291f47a.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,505 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/3145921055_6e5e44796b.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,505 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/3662788069_6a9e24443d_o.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,506 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/3777038398_f6bdb9269f.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,506 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/4025211980_c77ea7cefd.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,506 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/4026608894_43b7e26c34.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,506 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/4036450066_0af6d675fc_o.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,507 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/67431774_0470df3c08.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,507 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/67432060_648d836d1b.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,507 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hunter's sauce/990144934_88aa39bc8d_o.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,507 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/1439855011_89cb7ae165.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,508 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/187780182_64c2cb79cc.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,508 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/215961167_17c8b4d8b5.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,508 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/2228133179_c289710033.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,508 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/2821768622_3198272d58.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,509 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/3137166408_52621de002.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,509 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/351941608_5d78382617.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,509 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/3626431224_dbdec852ca.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,509 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/3981155377_e398571b00.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,510 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/4796360890_9081ce57d8.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,510 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/4814246277_0f56b78503.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,510 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/4828306632_afe1907b95.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,510 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/4897825877_fabfc9ed9f.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,511 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/4916854993_7541397065.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,511 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/5028844161_01ffe0813d.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,511 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/545510787_4b86e118b3.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,511 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/hyssop/839167318_6a46da8bee.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,512 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/1464695645_71589c24e7.jpg because we already ran on it 2 times
+2023-04-18 20:58:49,512 INFO skipping image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/1469999457_acf4312748.jpg because we already ran on it 2 times
+2023-04-18 20:58:50,335 INFO class_name: ice maker, extra_string_for_model: portable ice maker
+2023-04-18 20:58:50,348 INFO running with seed: 2645490888.
+2023-04-18 21:00:29,188 INFO copying results/2023-04-18_20-58-50-1777667415_490129c221.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/1777667415_490129c221_text2live_portable ice maker_ice maker_epochs_200.png
+2023-04-18 21:00:30,259 INFO class_name: ice maker, extra_string_for_model: sleek ice maker
+2023-04-18 21:00:30,271 INFO running with seed: 4048807523.
+2023-04-18 21:02:45,702 INFO copying results/2023-04-18_21-00-30-236196762_aec900de8b.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/236196762_aec900de8b_text2live_sleek ice maker_ice maker_epochs_300.png
+2023-04-18 21:02:46,328 INFO class_name: ice maker, extra_string_for_model: compact ice maker
+2023-04-18 21:02:46,340 INFO running with seed: 1953292153.
+2023-04-18 21:05:03,320 INFO copying results/2023-04-18_21-02-46-2519190922_0dde58b016.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/2519190922_0dde58b016_text2live_compact ice maker_ice maker_epochs_300.png
+2023-04-18 21:05:03,953 INFO class_name: ice maker, extra_string_for_model: modern ice maker
+2023-04-18 21:05:03,965 INFO running with seed: 2546423904.
+2023-04-18 21:06:35,594 INFO copying results/2023-04-18_21-05-03-2786429564_7d407420f6.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/2786429564_7d407420f6_text2live_modern ice maker_ice maker_epochs_200.png
+2023-04-18 21:06:36,467 INFO class_name: ice maker, extra_string_for_model: rustic ice maker
+2023-04-18 21:06:36,475 INFO running with seed: 161847719.
+2023-04-18 21:08:08,182 INFO copying results/2023-04-18_21-06-36-2891852658_f7f2ea23d9.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/2891852658_f7f2ea23d9_text2live_rustic ice maker_ice maker_epochs_200.png
+2023-04-18 21:08:08,867 INFO class_name: ice maker, extra_string_for_model: stainless steel ice maker
+2023-04-18 21:08:08,883 INFO running with seed: 1704943254.
+2023-04-18 21:09:36,245 INFO copying results/2023-04-18_21-08-08-2941239804_e35c72af96.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/2941239804_e35c72af96_text2live_stainless steel ice maker_ice maker_epochs_200.png
+2023-04-18 21:09:36,980 INFO class_name: ice maker, extra_string_for_model: futuristic ice maker
+2023-04-18 21:09:36,998 INFO running with seed: 3464648718.
+2023-04-18 21:12:32,167 INFO copying results/2023-04-18_21-09-36-2970865414_08e0b572fb.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/2970865414_08e0b572fb_text2live_futuristic ice maker_ice maker_epochs_400.png
+2023-04-18 21:12:32,877 INFO class_name: ice maker, extra_string_for_model: silent ice maker
+2023-04-18 21:12:32,892 INFO running with seed: 3130991289.
+2023-04-18 21:14:38,985 INFO copying results/2023-04-18_21-12-32-3068801052_a5344db6da.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/3068801052_a5344db6da_text2live_silent ice maker_ice maker_epochs_300.png
+2023-04-18 21:14:39,591 INFO class_name: ice maker, extra_string_for_model: colorful ice maker
+2023-04-18 21:14:39,615 INFO running with seed: 2053591609.
+2023-04-18 21:16:45,399 INFO copying results/2023-04-18_21-14-39-3111333955_53d233298f.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/3111333955_53d233298f_text2live_colorful ice maker_ice maker_epochs_300.png
+2023-04-18 21:16:46,079 INFO class_name: ice maker, extra_string_for_model: portable ice maker
+2023-04-18 21:16:46,092 INFO running with seed: 4183150259.
+2023-04-18 21:19:38,708 INFO copying results/2023-04-18_21-16-46-314293373_071d39addb.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/314293373_071d39addb_text2live_portable ice maker_ice maker_epochs_400.png
+2023-04-18 21:19:39,327 INFO class_name: ice maker, extra_string_for_model: silent ice maker
+2023-04-18 21:19:39,336 INFO running with seed: 2889400583.
+2023-04-18 21:21:03,757 INFO copying results/2023-04-18_21-19-39-3174738969_2a3f8d6d3d.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/3174738969_2a3f8d6d3d_text2live_silent ice maker_ice maker_epochs_200.png
+2023-04-18 21:21:04,447 INFO class_name: ice maker, extra_string_for_model: chic ice maker
+2023-04-18 21:21:04,463 INFO running with seed: 2941049512.
+2023-04-18 21:22:31,064 INFO copying results/2023-04-18_21-21-04-353440134_d20c2451b5.jpg/200/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/353440134_d20c2451b5_text2live_chic ice maker_ice maker_epochs_200.png
+2023-04-18 21:22:31,748 INFO class_name: ice maker, extra_string_for_model: sleek ice maker
+2023-04-18 21:22:31,763 INFO running with seed: 1380404469.
+2023-04-18 21:25:18,291 INFO copying results/2023-04-18_21-22-31-368216180_52aa14ec57.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/368216180_52aa14ec57_text2live_sleek ice maker_ice maker_epochs_400.png
+2023-04-18 21:25:18,928 INFO class_name: ice maker, extra_string_for_model: sparkling ice maker
+2023-04-18 21:25:18,947 INFO running with seed: 3822743489.
+2023-04-18 21:27:26,585 INFO copying results/2023-04-18_21-25-18-468860584_e00eaf1750.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice maker/468860584_e00eaf1750_text2live_sparkling ice maker_ice maker_epochs_300.png
+2023-04-18 21:27:27,197 INFO class_name: ice mass, extra_string_for_model: icy mass
+2023-04-18 21:27:27,214 INFO running with seed: 3370474328.
+2023-04-18 21:29:32,925 INFO copying results/2023-04-18_21-27-27-100583937_aaa476e4d8.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice mass/100583937_aaa476e4d8_text2live_icy mass_ice mass_epochs_300.png
+2023-04-18 21:29:33,966 INFO class_name: ice mass, extra_string_for_model: frosty mass
+2023-04-18 21:29:33,980 INFO running with seed: 2227647820.
+2023-04-18 21:31:40,363 INFO copying results/2023-04-18_21-29-33-1583234612_5f5c079111.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice mass/1583234612_5f5c079111_text2live_frosty mass_ice mass_epochs_300.png
+2023-04-18 21:31:41,050 INFO class_name: ice mass, extra_string_for_model: crystal ice mass
+2023-04-18 21:31:41,063 INFO running with seed: 3671136135.
+2023-04-18 21:34:40,903 INFO copying results/2023-04-18_21-31-41-2295472325_a5a4cae65a.jpg/400/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice mass/2295472325_a5a4cae65a_text2live_crystal ice mass_ice mass_epochs_400.png
+2023-04-18 21:34:41,576 INFO class_name: ice mass, extra_string_for_model: glittering ice mass
+2023-04-18 21:34:41,593 INFO running with seed: 4145956630.
+2023-04-18 21:36:53,295 INFO copying results/2023-04-18_21-34-41-2635837798_53a289052e.jpg/300/composite.png to /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice mass/2635837798_53a289052e_text2live_glittering ice mass_ice mass_epochs_300.png
+2023-04-18 21:36:53,967 INFO class_name: ice mass, extra_string_for_model: shimmering ice mass
+2023-04-18 21:36:53,975 INFO running with seed: 524417110.

@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: ice mass
+comp_text: high quality image of  icy mass ice mass
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice
+  mass/100583937_aaa476e4d8.jpg
+screen_text: icy mass ice mass
+src_text: ice mass

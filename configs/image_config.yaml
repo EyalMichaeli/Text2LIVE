@@ -6,7 +6,7 @@ wandb_entity: project_entity  # enter your entity here
 log_images_freq: 50
 # dataset configuration
 results_folder: "results"
-resize_input: 512
+resize_input: 385 # 425 is the average res in imagenet images. note that it's one number so it won't ruin aspect ratio. 
 d_divisible_crops: 1
 source_image_every: 75
 crops_min_cover: 0.85

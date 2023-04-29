@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: ice maker
+comp_text: an image of  chic ice maker ice maker
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice
+  maker/353440134_d20c2451b5.jpg
+screen_text: chic ice maker ice maker
+src_text: ice maker

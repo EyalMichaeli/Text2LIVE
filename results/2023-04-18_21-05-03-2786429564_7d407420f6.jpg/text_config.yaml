@@ -1,0 +1,7 @@
+bootstrap_epoch: 300
+bootstrap_text: ice maker
+comp_text: a  modern ice maker ice maker
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice
+  maker/2786429564_7d407420f6.jpg
+screen_text: modern ice maker ice maker
+src_text: ice maker

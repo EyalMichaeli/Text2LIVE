@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: American organ
+comp_text: the photo of  Antique American organ American organ
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  organ/1955230221_4ad1d78381.jpg
+screen_text: Antique American organ American organ
+src_text: American organ

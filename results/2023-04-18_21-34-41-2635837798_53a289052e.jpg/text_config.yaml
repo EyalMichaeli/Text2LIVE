@@ -1,0 +1,7 @@
+bootstrap_epoch: 200
+bootstrap_text: ice mass
+comp_text: a photo of  glittering ice mass ice mass
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice
+  mass/2635837798_53a289052e.jpg
+screen_text: glittering ice mass ice mass
+src_text: ice mass

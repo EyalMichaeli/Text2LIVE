@@ -1,0 +1,7 @@
+bootstrap_epoch: 400
+bootstrap_text: American crow
+comp_text: an  Majestic crow American crow
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  crow/402788645_f0eb12d3b0.jpg
+screen_text: Majestic crow American crow
+src_text: American crow

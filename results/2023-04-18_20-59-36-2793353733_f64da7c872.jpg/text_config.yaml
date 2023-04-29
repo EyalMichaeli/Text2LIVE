@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: American organ
+comp_text: an  Colorful American organ American organ
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  organ/2793353733_f64da7c872.jpg
+screen_text: Colorful American organ American organ
+src_text: American organ

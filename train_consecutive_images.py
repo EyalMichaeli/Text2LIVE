@@ -17,6 +17,9 @@ import cv2
 from PIL import Image
 import glob
 import logging
+import signal
+
+
 from datasets.image_dataset import SingleImageDataset
 from models.clip_extractor import ClipExtractor
 from models.image_model import Model
@@ -26,6 +29,22 @@ from train_image import train_model, save_locally
 
 from image_text_tools.gpt_methods import get_gpt_response
 from util.logging import init_logging
+
+
+# Define a signal handler function
+def signal_handler(sig, frame):
+    signal_name = signal.Signals(sig).name
+    logging.error(f"Received signal: {signal_name} ({signal})")
+    # Perform any required actions or cleanup here
+    # ...
+    torch.cuda.empty_cache()
+    exit(1)
+
+# Register the signal handler for keyboard interruption (Ctrl+C)
+signal.signal(signal.SIGINT, signal_handler)
+
+# Register the signal handler for program termination signals
+signal.signal(signal.SIGTERM, signal_handler)
 
 
 def visualize_output(results_folder: str, title: str = ""):
@@ -171,9 +190,11 @@ def run_on_imagenet_image(image_path, config_path, example_config_name, n_epochs
 
 
 if __name__ == "__main__":    
-    
+    """
+    nohup sh -c 'python train_consecutive_images.py' 2>&1 | tee -a /mnt/raid/home/eyal_michaeli/git/Text2LIVE/imagenet_10k_second_half.log &
+    """
     NUM_RUNS_FOR_EACH_IMAGE = 1
-    RUN_NAME = "imagenet_10k_first_half"
+    RUN_NAME = "imagenet_10k_second_half"
 
     config_path = "./configs/image_config.yaml"
     example_config_name = f"template.yaml"  
@@ -186,7 +207,7 @@ if __name__ == "__main__":
     imagenet_image_paths = sorted(list(glob.glob("/mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/*/*.jpg")))
     # take only half 
     index_to_split = len(imagenet_image_paths)//2
-    imagenet_image_paths = imagenet_image_paths[: index_to_split]
+    imagenet_image_paths = imagenet_image_paths[index_to_split: ]
     logging.info(f"len(imagenet_image_paths): {len(imagenet_image_paths)}")
     logging.info(f"index_to_split: {index_to_split}")
 
@@ -202,7 +223,6 @@ if __name__ == "__main__":
                 logging.info(f"skipping image_path: {image_path} because we already ran on it {num_files_with_image_name} times")
                 continue
 
-            # check if the image has larger size than 256x256
             # run
             # pick a random number of epochs
             n_epochs = random.choice([200, 300, 400])

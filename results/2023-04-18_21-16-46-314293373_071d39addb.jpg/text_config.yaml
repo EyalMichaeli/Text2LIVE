@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: ice maker
+comp_text: a  portable ice maker ice maker
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice
+  maker/314293373_071d39addb.jpg
+screen_text: portable ice maker ice maker
+src_text: ice maker

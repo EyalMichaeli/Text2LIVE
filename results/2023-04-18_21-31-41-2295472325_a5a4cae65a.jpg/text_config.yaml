@@ -1,0 +1,7 @@
+bootstrap_epoch: 500
+bootstrap_text: ice mass
+comp_text: a high quality image of  crystal ice mass ice mass
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/ice
+  mass/2295472325_a5a4cae65a.jpg
+screen_text: crystal ice mass ice mass
+src_text: ice mass

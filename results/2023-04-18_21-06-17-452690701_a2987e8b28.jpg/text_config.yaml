@@ -1,0 +1,7 @@
+bootstrap_epoch: 300
+bootstrap_text: American organ
+comp_text: high quality image of  ornate American organ American organ
+image_path: /mnt/raid/home/eyal_michaeli/datasets/imagenet_10k/imagenet_images/American
+  organ/452690701_a2987e8b28.jpg
+screen_text: ornate American organ American organ
+src_text: American organ
